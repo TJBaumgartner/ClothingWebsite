@@ -38,7 +38,7 @@
   color: var(--main-color);
 }
 .Navbar h2{
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 .Navbar a{
   color: var(--main-color);
@@ -64,6 +64,10 @@
   padding-top: 5px;
   height: 8vh;
   width: auto;
+}
+.fa-shopping-cart{
+  padding-top: 2vh;
+  font-size: 2rem !important;
 }
 /* Homepage */
 

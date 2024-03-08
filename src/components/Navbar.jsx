@@ -2,6 +2,7 @@ import {useEffect } from 'react'
 import { Link } from "react-router-dom";
 import '../App.css'
 import Logo from '../../public/assets/VanillaLogo.png'
+import 'font-awesome/css/font-awesome.min.css';
 
 
 function Navbar() {
@@ -26,7 +27,7 @@ function Navbar() {
                 </Link>
             </div>
             <div className='NavbarRight'>
-                <h2>Cart</h2>
+                <i className="fa fa-shopping-cart"></i>
             </div>
         </div>
     </nav>
