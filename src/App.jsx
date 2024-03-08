@@ -7,12 +7,13 @@ import Mens from './components/Mens';
 import Womens from './components/Womens';
 import Sale from './components/Sale';
 import About from './components/About';
-
+import Footer
+ from './components/Footer';
 function App() {
 
   return (
     <div className='AppContainer'>
-        <Navbar/>
+      <Navbar/>
       <div className='AppContent'>
         <Routes>
           <Route path="/" element={<Homepage/>}/>
@@ -23,6 +24,7 @@ function App() {
           <Route path="*" element={<Homepage/>}/>
         </Routes>
       </div>
+      <Footer/>
     </div>
   )
 }
