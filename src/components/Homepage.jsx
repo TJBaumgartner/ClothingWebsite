@@ -1,5 +1,6 @@
 import {useEffect } from 'react'
 import '../App.css'
+import Logo from '../../public/assets/VanillaLogo.png'
 
 function Homepage() {
     return (
@@ -29,22 +30,24 @@ function Homepage() {
               <div className='imagePlaceholder'><button>Shoes</button></div>
           </div>
         </section>
-        <section className='occasionContainer'>
+        <section className='occassionContainer'>
           <h1>Dress to Impress</h1>
-          <div className='dressContainer'>
-            <div className='occasionContent'>
-
+          <div className='occassionDiv'>
+            <div className='occassionContent'>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+              <button>Men's Suits</button>
             </div>
-            <div className='occasionImage'>
-
-            </div>
+            <div className='occassionImage'></div>
           </div>
-          <div className="suitContainer">
-            <div className='occasionImage'>
-
-            </div>
-            <div className='occasionContent'>
-  
+          <div className="occassionDiv">
+            <div className='occassionImage'></div>
+            <div className='occassionContent'>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+              <button>Women's Dresses</button>
             </div>
           </div>
         </section>
