@@ -6,6 +6,10 @@
   list-style: none;
   font-family: 'Lato', sans-serif;
 }
+:root {
+  --main-color: #35605A;
+  --accent-color: #EAE0CC;
+}
 .AppContainer{
 
 }
@@ -13,40 +17,56 @@
   width: 70%;
   margin: auto;
   padding-top: 3vh;
-  background-color: gray;
+  background-color: white;
   min-height: 100vh;
 }
 
 /* Navbar Styling */
 
+.NavbarContainer{
+  width: 100%;
+  height: 8vh;
+  position: fixed;
+}
 .Navbar{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  position: fixed;
   width: 70%;
-  margin: auto;
+  margin-left: 20vw;
+  line-height: 8vh;
+  color: var(--main-color);
+}
+.Navbar h2{
+  font-size: 1.2rem;
 }
 .Navbar a{
-  color: black;
+  color: var(--main-color);
 }
-.Navbar a:hover{
-  border-bottom: 2px solid black;
+.Navbar h2:hover{
+  border-bottom: 2px solid var(--main-color);
 }
 .NavbarRight{
   display: inherit;
   flex-direction: inherit;
-  justify-content: inherit;
+  justify-content: right;
   width: 20%;
-}
-.NavbarLeft{
-  width: 80%;
-  display: inherit;
-  flex-direction: inherit;
-  justify-content: left;
+  margin-right: 5%;
 }
 
+.NavbarLeft{
+  width: 40%;
+  display: inherit;
+  flex-direction: inherit;
+  justify-content: space-between;
+}
+.Logo{
+  padding-top: 5px;
+  height: 8vh;
+  width: auto;
+}
 /* Homepage */
 
 .HomepageContainer{
+  padding-top: 100px;
 }
