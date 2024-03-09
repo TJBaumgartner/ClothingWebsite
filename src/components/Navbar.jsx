@@ -1,7 +1,7 @@
 import {useEffect } from 'react'
 import { Link } from "react-router-dom";
 import '../App.css'
-import Logo from '../../public/assets/VanillaLogo.png'
+import Logo from '../../public/images/VanillaLogo.png'
 import 'font-awesome/css/font-awesome.min.css';
 
 

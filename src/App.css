@@ -87,9 +87,12 @@
 .bannerPlaceholder{
   width: 100%;
   height: 70vh;
-  background-color: var(--accent-color);
+  background-image: url("/images/FashionBanner.png");
+  background-repeat: none;
+  background-size: cover;
   margin-bottom: 5vh;
   position: relative;
+  color: black;
 }
 .bannerContent{
   position: absolute;
@@ -119,13 +122,13 @@
   left: 1.4rem;
   color: black;
   border: 2px solid var(--main-color);
-  background-color: var(--accent-color);
+  background-color: white;
   border-radius: 2px;
   margin-right: 1.3rem;
 }
 .buttonContainer button:hover{
   background-color: var(--main-color);
-  color: var(--accent-color);
+  color: white;
   transition: ease-in 0.35s;
 }
 
@@ -211,6 +214,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column: 1/3;
+  margin-bottom: 10vh;
 }
 .occassionContent{
   display: flex;
@@ -242,11 +246,18 @@
   color: white;
   transition: ease-in 0.35s;
 }
-.occassionImage{
+.occassionImageMen{
   height: 100%;
-  background-color: rgb(116, 31, 31);
+  background-image: url("/images/SuitMan.png");
+  background-repeat: none;
+  background-size: cover;
 }
-
+.occassionImageWoman{
+  height: 100%;
+  background-image: url("/images/DressWoman.png");
+  background-size: 100% 100%;
+  background-repeat: none;
+}
 /* Homepage About Styling */
 /* Homepage About Styling */
 /* Homepage About Styling */

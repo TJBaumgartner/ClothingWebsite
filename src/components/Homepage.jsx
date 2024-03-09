@@ -1,13 +1,14 @@
 import { useState, useEffect } from 'react'
 import '../App.css'
-import SweaterMen from '../../public/assets/SweaterMen.png'
-import ShirtMen from '../../public/assets/ShirtMen.png'
-import ShoesMen from '../../public/assets/ShoesMen.png'
-import PantsMen from '../../public/assets/PantsMen.png'
-import SweaterWoman from '../../public/assets/SweaterWoman.png'
-import ShirtWoman from '../../public/assets/ShirtWoman.png'
-import PantsWoman from '../../public/assets/PantsWoman.png'
-import ShoesWoman from '../../public/assets/ShoesWoman.png'
+import SweaterMen from '../../public/images/SweaterMen.png'
+import ShirtMen from '../../public/images/ShirtMen.png'
+import ShoesMen from '../../public/images/ShoesMen.png'
+import PantsMen from '../../public/images/PantsMen.png'
+import SweaterWoman from '../../public/images/SweaterWoman.png'
+import ShirtWoman from '../../public/images/ShirtWoman.png'
+import PantsWoman from '../../public/images/PantsWoman.png'
+import ShoesWoman from '../../public/images/ShoesWoman.png'
+
 
 function Homepage() {
 
@@ -96,10 +97,10 @@ function Homepage() {
               </p>
               <button>Men's Suits</button>
             </div>
-            <div className='occassionImage'></div>
+            <div className='occassionImageMen'></div>
           </div>
           <div className="occassionDiv">
-            <div className='occassionImage'></div>
+            <div className='occassionImageWoman'></div>
             <div className='occassionContent'>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
