@@ -1,6 +1,9 @@
 import {useEffect } from 'react'
 import '../App.css'
-import Logo from '../../public/assets/VanillaLogo.png'
+import Sweater from '../../public/assets/Sweater.png'
+import Shirt from '../../public/assets/Shirt.png'
+import Shoes from '../../public/assets/Shoes.png'
+import Pants from '../../public/assets/Pants.png'
 
 function Homepage() {
     return (
@@ -24,10 +27,23 @@ function Homepage() {
             <h2>Women's</h2>
           </div>
           <div className='browserImages'>
-              <div className='imagePlaceholder'><button>Sweaters</button></div>
-              <div className='imagePlaceholder'><button>Shirts</button></div>
-              <div className='imagePlaceholder'><button>Pants</button></div>
-              <div className='imagePlaceholder'><button>Shoes</button></div>
+              
+              <div className='imagePlaceholder'>
+                <img src={Sweater}></img>
+                <button>Sweaters</button>
+              </div>
+              <div className='imagePlaceholder'>
+                <img src={Shirt}></img>
+                <button>Shirts</button>
+              </div>
+              <div className='imagePlaceholder'>
+                <img src={Pants}></img>
+                <button>Pants</button>
+              </div>
+              <div className='imagePlaceholder'>
+                <img src={Shoes}></img>
+                <button>Shoes</button>
+              </div>
           </div>
         </section>
         <section className='occassionContainer'>
