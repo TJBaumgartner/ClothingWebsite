@@ -1,11 +1,23 @@
-import {useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import '../App.css'
-import Sweater from '../../public/assets/Sweater.png'
-import Shirt from '../../public/assets/Shirt.png'
-import Shoes from '../../public/assets/Shoes.png'
-import Pants from '../../public/assets/Pants.png'
+import SweaterMen from '../../public/assets/SweaterMen.png'
+import ShirtMen from '../../public/assets/ShirtMen.png'
+import ShoesMen from '../../public/assets/ShoesMen.png'
+import PantsMen from '../../public/assets/PantsMen.png'
+import SweaterWoman from '../../public/assets/SweaterWoman.png'
+import ShirtWoman from '../../public/assets/ShirtWoman.png'
+import PantsWoman from '../../public/assets/PantsWoman.png'
+import ShoesWoman from '../../public/assets/ShoesWoman.png'
 
 function Homepage() {
+
+  const [menTab, setMenTab] = useState(true)
+  
+  const changeBrowseTab = () => {
+    setMenTab(!menTab)
+    console.log(menTab)
+  }
+
     return (
     <main className='HomepageContainer'>
         <section>
@@ -22,29 +34,58 @@ function Homepage() {
         </section>
         <section className='browserContainer'>
           <h1>What We're Wearing</h1>
-          <div className='browserTabs'>
-            <h2>Men's</h2>
-            <h2>Women's</h2>
+          {menTab == true ?
+          <div>
+            <div className='browserTabs'>
+              <h2 className='activeTab'>Men's</h2>
+              <h2 onClick={() => changeBrowseTab()} >Women's</h2>
+            </div>
+            <div className='browserImages'>
+                <div className='imagePlaceholder'>
+                  <img src={SweaterMen}></img>
+                  <button>Sweaters</button>
+                </div>
+                <div className='imagePlaceholder'>
+                  <img src={ShirtMen}></img>
+                  <button>Shirts</button>
+                </div>
+                <div className='imagePlaceholder'>
+                  <img src={PantsMen}></img>
+                  <button>Pants</button>
+                </div>
+                <div className='imagePlaceholder'>
+                  <img src={ShoesMen}></img>
+                  <button>Shoes</button>
+                </div>
+            </div>
           </div>
-          <div className='browserImages'>
-              
+          
+          :  
+          <div>
+            <div className='browserTabs'>
+              <h2 onClick={() => changeBrowseTab()} >Men's</h2>
+              <h2 className='activeTab'>Women's</h2>
+            </div>
+            <div className='browserImages'>
               <div className='imagePlaceholder'>
-                <img src={Sweater}></img>
+                <img src={SweaterWoman}></img>
                 <button>Sweaters</button>
               </div>
               <div className='imagePlaceholder'>
-                <img src={Shirt}></img>
+                <img src={ShirtWoman}></img>
                 <button>Shirts</button>
               </div>
               <div className='imagePlaceholder'>
-                <img src={Pants}></img>
+                <img src={PantsWoman}></img>
                 <button>Pants</button>
               </div>
               <div className='imagePlaceholder'>
-                <img src={Shoes}></img>
+                <img src={ShoesWoman}></img>
                 <button>Shoes</button>
               </div>
-          </div>
+            </div>
+        </div>
+          }
         </section>
         <section className='occassionContainer'>
           <h1>Dress to Impress</h1>
