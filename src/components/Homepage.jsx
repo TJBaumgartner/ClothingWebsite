@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from "react-router-dom";
 import '../App.css'
 import SweaterMen from '../../public/images/SweaterMen.png'
 import ShirtMen from '../../public/images/ShirtMen.png'
@@ -27,8 +28,12 @@ function Homepage() {
               <h1>Start Shopping</h1>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
               <div className='buttonContainer'>
-                <button>Men's</button>
-                <button>Women's</button>
+                <Link to="/mens">
+                    <h2>Men's</h2>
+                </Link>
+                <Link to="/womens">
+                    <h2>Women's</h2>
+                </Link>              
               </div>
             </div>
           </div>
