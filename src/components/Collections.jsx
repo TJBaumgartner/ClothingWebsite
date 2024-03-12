@@ -18,6 +18,7 @@ function Collections(props) {
                 <h1>{product.name}</h1>
                 <h2>{product.price}</h2>
                 <p>{product.description}</p>
+                <img src={product.image}></img>
               </div>
               : null
             })

@@ -38,6 +38,11 @@ function Homepage() {
             </div>
           </div>
         </section>
+        <section>
+          <h1>New Release</h1>
+          <div className='slideshowContainer'>
+          </div>
+        </section>
         <section className='browserContainer'>
           <h1>What We're Wearing</h1>
           {menTab == true ?
