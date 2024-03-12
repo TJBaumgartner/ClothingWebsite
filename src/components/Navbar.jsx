@@ -13,13 +13,13 @@ function Navbar() {
                 <Link to="/">
                     <img src={Logo} className='Logo'></img>
                 </Link>
-                <Link to="/mens">
+                <Link to="collections/mens">
                     <h2>Mens</h2>
                 </Link>
-                <Link to="/womens">
+                <Link to="/collections/womens">
                     <h2>Womens</h2>
                 </Link>
-                <Link to="/sale">
+                <Link to="collections/sale">
                     <h2>Sale</h2>
                 </Link>
                 <Link to="/about">

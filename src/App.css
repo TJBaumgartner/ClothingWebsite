@@ -17,7 +17,7 @@
 .AppContent{
   width: 80%;
   margin: auto;
-  padding-top: 3vh;
+  padding-top: 1vh;
   background-color: white;
   min-height: 100vh;
 }
@@ -45,6 +45,7 @@
 }
 .Navbar a{
   color: var(--main-color);
+  height: 8vh;
 }
 .Navbar h2:hover{
   border-bottom: 2px solid var(--main-color);
@@ -87,7 +88,7 @@
 .adBanner{
   background-color: var(--main-color);
   color: white;
-  margin-top: 100px;
+  margin-top: 75px;
   position: absolute;
   top: 0;
   left: 0;
@@ -329,7 +330,11 @@
   margin-top: 100px;
 }
 
-
+.collectionsContainer{
+  padding-top: 20vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
 
 /*#2b2e2f USE THIS COLOR FOR BLACK TEXT */
 /*#2b2e2f USE THIS COLOR FOR BLACK TEXT */

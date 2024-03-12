@@ -28,10 +28,10 @@ function Homepage() {
               <h1>Start Shopping</h1>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
               <div className='buttonContainer'>
-                <Link to="/mens">
+                <Link to="collections/mens">
                     <h2>Men's</h2>
                 </Link>
-                <Link to="/womens">
+                <Link to="collections/womens">
                     <h2>Women's</h2>
                 </Link>              
               </div>
