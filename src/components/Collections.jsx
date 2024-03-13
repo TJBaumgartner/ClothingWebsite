@@ -1,8 +1,9 @@
 import '../App.css'
 import {useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { Products } from '../products'
 import Sidenav from './Sidenav'
+import ProductCard from './ProductCard'
 
 function Collections() {
 
@@ -22,7 +23,19 @@ function Collections() {
   return (
   <>
     <nav className='navBanner'>
-      <h1>hi</h1>
+      <div>
+        {sex !== null &&
+          <Link to={`/collections/${sex}`}>
+            <div>
+              <h2>{sex}</h2>
+            </div>
+          </Link>
+        }
+        {category &&
+                <h2><span>&gt;</span>{category}</h2>            
+        }
+      </div>
+
     </nav>
     <main className='collectionsContainer'>
       <Sidenav sex={sex}/>
@@ -30,49 +43,25 @@ function Collections() {
       {category == null && products && true &&
           products.sort((a, b) =>  b.price - a.price).map((product) => {
             return product.gender == sex &&
-            <div key={product.id} className='productCard'>
-              <img src={product.image}></img>
-              <div>
-                <h1>{product.name}</h1>
-                <h2>${product.price}</h2>
-              </div>
-            </div>
+            <ProductCard product={product} key={product.id}></ProductCard>
           })
         }
         {category == 'arrivals' && products && true &&
           products.sort((a, b) =>  b.price - a.price).map((product) => {
             return product.gender == sex && product.newArrival == true &&
-            <div key={product.id} className='productCard'>
-              <img src={product.image}></img>
-              <div>
-                <h1>{product.name}</h1>
-                <h2>${product.price}</h2>
-              </div>
-            </div>
+            <ProductCard product={product} key={product.id}></ProductCard>
           })
         }
         {category == 'sale' &&
           products.sort((a, b) =>  b.price - a.price).map((product) => {
             return product.gender == sex && product.onSale == true &&
-            <div key={product.id} className='productCard'>
-              <img src={product.image}></img>
-              <div>
-                <h1>{product.name}</h1>
-                <h2>${product.price}</h2>
-              </div>
-            </div>
+            <ProductCard product={product} key={product.id}></ProductCard>
           })
         }
         {products && category !== 'arrivals' && category !== 'sale' &&
           products.sort((a, b) =>  b.price - a.price).map((product) => {
             return product.gender == sex && product.category == category &&
-            <div key={product.id} className='productCard'>
-              <img src={product.image}></img>
-              <div>
-                <h1>{product.name}</h1>
-                <h2>${product.price}</h2>
-              </div>
-            </div>
+            <ProductCard product={product} key={product.id}></ProductCard>
           })
         }
       </div>

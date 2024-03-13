@@ -351,17 +351,47 @@
 }
 .sideNav{
   position: sticky;
-  top: 10vh;
+  top: 20vh;
   grid-column: 1/2;
   grid-row: auto;
   align-self: start;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.sideNav h2{
+  font-size: 1.4rem;
+  color: #2b2e2f;
+}
+.sideNav h2:hover{
+  color: #000000;
 }
 .navBanner{
   position: sticky;
   top: 8vh;
   width: 100%;
-  background-color: green;
+  background-color: #F2F3F4 ;
+  width: 80%;
+  margin: auto;
 }
+.navBanner a{
+  color: #2b2e2f;
+  text-transform: capitalize;
+}
+.navBanner a:hover{
+  color: #000000;
+}
+.navBanner div{
+  display: flex;
+  flex-direction: row;
+  text-transform: capitalize;
+}
+.navBanner span{
+  margin: 0px 5px 0px 5%;
+  color: #adabab; 
+}
+
 .productCard h1, h2{
   font-size: 1rem;
 }
@@ -379,6 +409,14 @@
   margin-top: 100px;
 }
 
+.clearanceCross{
+  color: #2b2e2f8c;
+  text-decoration: line-through;
+  text-decoration-color: rgba(226, 17, 2, 0.658);
+}
+.clearanceColor{
+  color: var(--main-color);
+}
 /*#2b2e2f USE THIS COLOR FOR BLACK TEXT */
 /*#2b2e2f USE THIS COLOR FOR BLACK TEXT */
 /*#2b2e2f USE THIS COLOR FOR BLACK TEXT */
