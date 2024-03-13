@@ -1,30 +1,37 @@
-import {useEffect, useState } from 'react'
 import '../App.css'
+import {useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 import { Products } from '../products'
-function Collections(props) {
-    const [products, setProducts] = useState()
-    const category = props.category
+import Sidenav from './Sidenav'
+
+function Collections() {
+
+  const [products, setProducts] = useState()
+  const sex = useParams().sex
+  
   useEffect(() => {
     setProducts(Products)
   }, [])
 
-    return (
-    <main className='collectionsContainer'>
-        <h1>Mens</h1>
-          {products &&
-            products.map((product) => {
-              // return product.category == category || product.gender == category ?
-              return  product.gender == 'female' ?
-              <div key={product.id}>
-                <h1>{product.name}</h1>
-                <h2>{product.price}</h2>
-                <p>{product.description}</p>
-                <img src={product.image}></img>
-              </div>
-              : null
-            })
-          }
-    </main>
+  return (
+  <main className='collectionsContainer'>
+    <Sidenav sex={sex}/>
+    <div className='collectionsContent'>
+      {products &&
+        products.map((product) => {
+          return  product.gender == sex ?
+          <div key={product.id} className='productCard'>
+            <img src={product.image}></img>
+            <div>
+              <h1>{product.name}</h1>
+              <h2>{product.price}</h2>
+            </div>
+          </div>
+          : null
+        })
+      }
+    </div>
+  </main>
   )
 }
 
