@@ -12,7 +12,7 @@
   color: #2b2e2f;
 }
 .AppContainer{
-
+  position: relative;
 }
 .AppContent{
   width: 80%;
@@ -25,9 +25,10 @@
 /* Navbar Styling */
 
 .NavbarContainer{
+  top:0;
   width: 100%;
   height: 8vh;
-  position: fixed;
+  position: sticky;
   background-color: white;
   z-index: 2;
 }
@@ -79,7 +80,11 @@
 /* Homepage */
 
 .HomepageContainer{
-  padding-top: 100px;
+  width: 80%;
+  margin: auto;
+  padding-top: 1vh;
+  background-color: white;
+  min-height: 100vh;
 }
 
 /* Banner Styling */
@@ -88,12 +93,8 @@
 .adBanner{
   background-color: var(--main-color);
   color: white;
-  margin-top: 75px;
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 100%;
-  z-index: 1;
   padding: 1vh;
 }
 .adBannerContent{
@@ -329,8 +330,12 @@
 
 .collectionsContainer{
   display: grid;
-  grid-template-columns: 1fr 3fr;
-  margin-top: 20vh;
+  grid-template-columns: 1fr 4fr;
+  width: 80%;
+  margin: auto;
+  padding-top: 20vh;
+  background-color: white;
+  min-height: 100vh;
 }
 .collectionsContent{
   width: 80%;
@@ -342,8 +347,20 @@
 .collectionsContent img{
   width: 100%;
   height: 50vh;
+  border: 3px solid var(--accent-color);
 }
 .sideNav{
+  position: sticky;
+  top: 10vh;
+  grid-column: 1/2;
+  grid-row: auto;
+  align-self: start;
+}
+.navBanner{
+  position: sticky;
+  top: 8vh;
+  width: 100%;
+  background-color: green;
 }
 .productCard h1, h2{
   font-size: 1rem;

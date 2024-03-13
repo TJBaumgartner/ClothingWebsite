@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import {Route, Routes } from 'react-router-dom';
+import { useEffect, useState } from 'react'
+import {Route, Routes, useParams } from 'react-router-dom';
 import { Link } from "react-router-dom";
 import './App.css'
 import Homepage from './components/Homepage';
@@ -8,11 +8,10 @@ import About from './components/About';
 import Footer from './components/Footer';
 import Collections from './components/Collections';
 function App() {
-
   return (
     <div className='AppContainer'>
       <Navbar/>
-      <div className='AppContent'>
+      <div>
         <div className='adBanner'>
           <div className='adBannerContent'>
             <h1>New Arrivals Every Monday | Get Free Shipping On Orders Over $99</h1>
@@ -24,13 +23,13 @@ function App() {
             </Link>
           </div>
         </div>
-        <Routes>
-          <Route path="/" element={<Homepage/>}/>
-          <Route path="/collections/:sex" element={<Collections/>}/>
-          <Route path="/collections/:sex/:category" element={<Collections/>}/>
-          <Route path="/about" element={<About/>}/>
-          <Route path="*" element={<Homepage/>}/>
-        </Routes>
+          <Routes>
+            <Route path="/" element={<Homepage/>}/>
+            <Route path="/collections/:sex" element={<Collections/>}/>
+            <Route path="/collections/:sex/:category" element={<Collections/>}/>
+            <Route path="/about" element={<About/>}/>
+            <Route path="*" element={<Homepage/>}/>
+          </Routes>
       </div>
       <Footer/>
     </div>

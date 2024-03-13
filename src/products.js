@@ -251,8 +251,8 @@ export const Products = [
     },
     {
         id: uuid(),
-        name: 'Chukka',
-        description: 'Stylish Casual Boots',
+        name: 'Stylish Casual Boots',
+        description: 'Ultra-flexible and pliable design with a rounded heel, anatomical heel cup and arch for underfoot comfort, no-slip heel padding, UltimateFlex built-in flex grooves, and soft and light outsole',
         price: 130,
         gender: "mens",
         category: "shoes",
@@ -263,7 +263,7 @@ export const Products = [
     //Suits male
     {
         id: uuid(),
-        name: 'Stylish 2 Piece Wedding Suit',
+        name: 'Stylish 2 Piece Suit',
         description: "Suitable for weddings,prom,graduation ceremoney,dating, meeting, yacht party, banquet, formal event,business meetings, fashion shows, hosts' wearing, holiday, Christmas gift, grand holidays or just daily use.",
         price: 180,
         gender: "mens",
