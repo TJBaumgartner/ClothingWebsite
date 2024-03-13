@@ -8,7 +8,8 @@ function Collections() {
 
   const [products, setProducts] = useState()
   const sex = useParams().sex
-  
+  const category = useParams().category
+
   useEffect(() => {
     setProducts(Products)
   }, [])
@@ -17,9 +18,22 @@ function Collections() {
   <main className='collectionsContainer'>
     <Sidenav sex={sex}/>
     <div className='collectionsContent'>
-      {products &&
+      {category == 'arrivals' && products &&
+      console.log(products.sort((a, b) => a.price - b.price))
+        // products.sort((a, b) => a.price > b.price ? 1 : -1).map((product) => {
+        //   return product.gender == sex && product.newArrival == true &&
+        //   <div key={product.id} className='productCard'>
+        //     <img src={product.image}></img>
+        //     <div>
+        //       <h1>{product.name}</h1>
+        //       <h2>{product.price}</h2>
+        //     </div>
+        //   </div>
+        // })
+      }
+      {category == 'sale' &&
         products.map((product) => {
-          return  product.gender == sex ?
+          return product.gender == sex && product.onSale == true &&
           <div key={product.id} className='productCard'>
             <img src={product.image}></img>
             <div>
@@ -27,7 +41,18 @@ function Collections() {
               <h2>{product.price}</h2>
             </div>
           </div>
-          : null
+        })
+      }
+      {products && category &&
+        products.map((product) => {
+          return product.gender == sex && product.category == category &&
+          <div key={product.id} className='productCard'>
+            <img src={product.image}></img>
+            <div>
+              <h1>{product.name}</h1>
+              <h2>{product.price}</h2>
+            </div>
+          </div>
         })
       }
     </div>
