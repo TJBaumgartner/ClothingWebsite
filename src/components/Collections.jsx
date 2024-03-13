@@ -13,7 +13,8 @@ function Collections(props) {
         <h1>Mens</h1>
           {products &&
             products.map((product) => {
-              return product.category == category || product.gender == category ?
+              // return product.category == category || product.gender == category ?
+              return  product.gender == 'female' ?
               <div key={product.id}>
                 <h1>{product.name}</h1>
                 <h2>{product.price}</h2>
