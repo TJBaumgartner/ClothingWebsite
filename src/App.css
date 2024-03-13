@@ -50,6 +50,7 @@
 }
 .Navbar h2:hover{
   border-bottom: 2px solid var(--main-color);
+  line-height: 7.8vh;
 }
 .NavbarRight{
   display: inherit;
@@ -371,9 +372,9 @@
   position: sticky;
   top: 8vh;
   width: 100%;
-  background-color: #F2F3F4 ;
-  width: 80%;
+  background-color: #F2F3F4;
   margin: auto;
+  padding: 2px 0px 2px 0px;
 }
 .navBanner a{
   color: #2b2e2f;
@@ -386,9 +387,10 @@
   display: flex;
   flex-direction: row;
   text-transform: capitalize;
+  margin-left: 10%;
 }
 .navBanner span{
-  margin: 0px 5px 0px 5%;
+  margin: 0px 5px 0px 0px;
   color: #adabab; 
 }
 

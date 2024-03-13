@@ -1,18 +1,21 @@
 import {useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import '../App.css'
-
 function ProductCard(props) {
     const product = props.product
+
     return (
     <>
         <div className='productCard'>
-            <img src={product.image}></img>
+            <Link to={`/collections/${product.gender}/${product.category}/${product.id}`} state={{product}}>
+                <img src={product.image}></img>
+            </Link>
             <div>
                 <h1>{product.name}</h1>
                 {product.onSale == true ?
                     <div>
                         <h2 className='clearanceCross'>${product.price}</h2>
-                        <h2 className='clearanceColor'>${Math.ceil(product.price*0.7)}</h2>
+                        <h2 className='clearanceColor'>${Math.ceil(product.price*0.7)} Clearance</h2>
                     </div>
                     :
                     <div>

@@ -7,6 +7,8 @@ import Navbar from './components/Navbar';
 import About from './components/About';
 import Footer from './components/Footer';
 import Collections from './components/Collections';
+import ProductDetail from './components/ProductDetail'
+
 function App() {
   return (
     <div className='AppContainer'>
@@ -27,6 +29,7 @@ function App() {
             <Route path="/" element={<Homepage/>}/>
             <Route path="/collections/:sex" element={<Collections/>}/>
             <Route path="/collections/:sex/:category" element={<Collections/>}/>
+            <Route path="/collections/:sex/:category/:id" element={<ProductDetail/>}/>
             <Route path="/about" element={<About/>}/>
             <Route path="*" element={<Homepage/>}/>
           </Routes>

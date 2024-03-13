@@ -4,6 +4,7 @@ import { useParams, Link } from 'react-router-dom'
 import { Products } from '../products'
 import Sidenav from './Sidenav'
 import ProductCard from './ProductCard'
+import NavBanner from './NavBanner'
 
 function Collections() {
 
@@ -22,21 +23,7 @@ function Collections() {
 
   return (
   <>
-    <nav className='navBanner'>
-      <div>
-        {sex !== null &&
-          <Link to={`/collections/${sex}`}>
-            <div>
-              <h2>{sex}</h2>
-            </div>
-          </Link>
-        }
-        {category &&
-                <h2><span>&gt;</span>{category}</h2>            
-        }
-      </div>
-
-    </nav>
+    <NavBanner/>
     <main className='collectionsContainer'>
       <Sidenav sex={sex}/>
       <div className='collectionsContent'>
