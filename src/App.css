@@ -398,19 +398,6 @@
   font-size: 1rem;
 }
 
-/* Footer Styling */
-/* Footer Styling */
-/* Footer Styling */
-
-.footerContainer{
-  width: 80%;
-  height: 40vh;
-  margin: auto;
-  background-color: white;
-  border-top: 1px solid black;
-  margin-top: 100px;
-}
-
 .clearanceCross{
   color: #2b2e2f8c;
   text-decoration: line-through;
@@ -419,13 +406,68 @@
 .clearanceColor{
   color: var(--main-color);
 }
-/*#2b2e2f USE THIS COLOR FOR BLACK TEXT */
-/*#2b2e2f USE THIS COLOR FOR BLACK TEXT */
-/*#2b2e2f USE THIS COLOR FOR BLACK TEXT */
-/*#2b2e2f USE THIS COLOR FOR BLACK TEXT */
-/*#2b2e2f USE THIS COLOR FOR BLACK TEXT */
-/*#2b2e2f USE THIS COLOR FOR BLACK TEXT */
-/*#2b2e2f USE THIS COLOR FOR BLACK TEXT */
-/*#2b2e2f USE THIS COLOR FOR BLACK TEXT */
-/*#2b2e2f USE THIS COLOR FOR BLACK TEXT */
-/*#2b2e2f USE THIS COLOR FOR BLACK TEXT */
+/* Detail Styling */
+/* Detail Styling */
+/* Detail Styling */
+
+.detailContainer{
+  display: grid;
+  grid-template-columns: 1fr 3fr 2fr;
+  width: 80%;
+  margin: auto;
+  padding-top: 20vh;
+  background-color: white;
+  min-height: 100vh;
+}
+.detailContainer img{
+  width: 100%;
+}
+.detailImageContainer{
+  width: 100%;
+  grid-column: 2/3;
+}
+.detailContent{
+  width: 100%;
+  grid-column: 3/4;
+}
+.detailTop{
+  border-bottom: 1px solid black;
+}
+.detailMiddle{
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.detailMiddle input[type="radio"]{
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+.detailMiddle label{
+  background-color: white;
+  flex: 1 1 0;
+  border: 1px solid var(--main-color);
+  padding: 10px 20px;
+  font-size: 2rem;
+  text-align: center;
+  border-radius: 4px;
+}
+.detailMiddle label:hover{
+  background-color: var(--accent-color);
+}
+.detailMiddle input[type="radio"]:checked+label{
+  background-color: var(--main-color);
+  color: white;
+  transition: ease-in .2s;
+}
+/* Footer Styling */
+/* Footer Styling */
+/* Footer Styling */
+.footerContainer{
+  width: 80%;
+  height: 40vh;
+  margin: auto;
+  background-color: white;
+  border-top: 1px solid black;
+  margin-top: 100px;
+}
