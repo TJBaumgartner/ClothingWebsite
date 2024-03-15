@@ -334,7 +334,7 @@
   grid-template-columns: 1fr 4fr;
   width: 80%;
   margin: auto;
-  padding-top: 20vh;
+  padding-top: 5vh;
   background-color: white;
   min-height: 100vh;
 }
@@ -415,12 +415,15 @@
   grid-template-columns: 1fr 3fr 2fr;
   width: 80%;
   margin: auto;
-  padding-top: 20vh;
+  padding-top: 5vh;
   background-color: white;
   min-height: 100vh;
 }
 .detailContainer img{
-  width: 100%;
+  width: 90%;
+  margin-right: 10%;
+  padding-right: 5%;
+  border-right: 3px solid var(--main-color);
 }
 .detailImageContainer{
   width: 100%;
@@ -429,14 +432,25 @@
 .detailContent{
   width: 100%;
   grid-column: 3/4;
+  height: 100%;
 }
 .detailTop{
   border-bottom: 1px solid black;
+  height: 10%;
+}
+.clearanceContainer h2{
+  font-size: 1.6rem;
 }
 .detailMiddle{
   display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+.sizeContainer{
+  display: flex;
   justify-content: space-between;
   gap: 1rem;
+  margin-top: 1rem;
 }
 .detailMiddle input[type="radio"]{
   opacity: 0;
@@ -447,10 +461,9 @@
   background-color: white;
   flex: 1 1 0;
   border: 1px solid var(--main-color);
-  padding: 10px 20px;
+  padding: 1rem 1rem;
   font-size: 2rem;
   text-align: center;
-  border-radius: 4px;
 }
 .detailMiddle label:hover{
   background-color: var(--accent-color);
@@ -459,6 +472,84 @@
   background-color: var(--main-color);
   color: white;
   transition: ease-in .2s;
+}
+.quantityContainer{
+  margin: 2rem 0 2rem 0
+;}
+.quantityContainer h2{
+  font-size: 1.5rem;
+  margin-bottom: .5rem;
+}
+.sideButton{
+  padding: 1rem;
+  border: none;
+  font-size: 1.5rem;
+  border: 2px solid var(--main-color);
+  background-color: white;
+  border-radius: 2px;
+  text-align: center;
+  font-weight: 900;
+}
+.sideButton:hover{
+  color: white;
+  background-color: var(--main-color);
+  transition: ease-in .1s;
+}
+.quantityButton{
+  padding: 2rem;
+  width: 8rem;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: 900;
+  border: 3px solid var(--main-color);
+  background-color: white;
+  border-radius: 2px;
+  margin-left: 1.3rem;
+  margin-right: 1.3rem;
+  text-align: center;
+}
+.addCartContainer{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.addCartContainer p{
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+.addToCartButton{
+  width: 100%;
+  padding: 15px;
+  border: none;
+  font-size: 2rem;
+  border: 3px solid var(--main-color);
+  background-color: white;
+  border-radius: 2px;
+  text-align: center;
+  font-weight: 900;
+}
+.addToCartButton:hover{
+  background-color: var(--main-color);
+  color: white;
+  transition: ease-in .15s;
+}
+.descriptionContainer{
+
+}
+.descriptionContainer p{
+  font-size: 1.5rem;
+}
+.descriptionContainer h2{
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.gaurentee{
+  text-align: center;
+  padding-top: 1rem;
+  margin: 2rem 0 2rem 0;
+  border-top: 3px solid var(--main-color);
 }
 /* Footer Styling */
 /* Footer Styling */

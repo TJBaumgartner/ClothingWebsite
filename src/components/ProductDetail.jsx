@@ -4,8 +4,25 @@ import '../App.css'
 import NavBanner from './NavBanner';
 
 function ProductDetail() {
+
+
+    const [quantity, setQuantity] = useState(1)
+
+
+
     const location = useLocation();
     const product = location.state.product
+
+    const increaseQuantity = () => {
+        if(quantity < 5){
+            setQuantity(quantity+1)
+        }
+    }
+    const decreaseQuantity = () => {
+        if(quantity > 1){
+            setQuantity(quantity-1)
+        }
+    }
     return (
     <>
         <NavBanner/>
@@ -20,9 +37,9 @@ function ProductDetail() {
                     }
                     <h1>{product.name}</h1>
                     {product.onSale == true ?
-                            <div>
+                            <div className='clearanceContainer'>
                                 <h2 className='clearanceCross'>${product.price}</h2>
-                                <h2 className='clearanceColor'>${Math.ceil(product.price*0.7)} Clearance</h2>
+                                <h2 className='clearanceColor'>${Math.ceil(product.price*0.7)} Clearance (30%off)</h2>
                             </div>
                             :
                             <div>
@@ -31,16 +48,39 @@ function ProductDetail() {
                     }
                 </div>
                 <div className='detailMiddle'>
-                    <input name='size' type='radio' id='XS'></input>
-                    <label for="XS">XS</label>
-                    <input name='size' type='radio' id='S'></input>
-                    <label for="S">S</label>
-                    <input name='size' type='radio' id='M'></input>
-                    <label for="M">M</label>
-                    <input name='size' type='radio' id='L'></input>
-                    <label for="L">L</label>
-                    <input name='size' type='radio' id='XL'></input>
-                    <label for="XL">XL</label>
+                    <h1>Select Size:</h1>
+                    <div className='sizeContainer'>
+                        <input name='size' type='radio' id='XS'></input>
+                        <label for="XS">XS</label>
+                        <input name='size' type='radio' id='S'></input>
+                        <label for="S">S</label>
+                        <input name='size' type='radio' id='M'></input>
+                        <label for="M">M</label>
+                        <input name='size' type='radio' id='L'></input>
+                        <label for="L">L</label>
+                        <input name='size' type='radio' id='XL'></input>
+                        <label for="XL">XL</label>
+                    </div>
+                    <div className='quantityContainer'>
+                        <h2>Quantity</h2>
+                        <div>
+                            <button onClick={() => decreaseQuantity()} className='sideButton'>-</button>
+                            <button className='quantityButton'>{quantity}</button>
+                            <button onClick={() => increaseQuantity()} className='sideButton'>+</button>
+                        </div>
+                    </div>
+                    <div className='addCartContainer'>
+                        <button className='addToCartButton'>Add To Cart</button>
+                        <p>Free Shipping Over $99</p>
+                    </div>
+                    <div className='descriptionContainer'>
+                        <div className='gaurentee'>
+                            <h1>Quality Gaurentee!</h1>
+                            <p>We strive to ensure only the best quality material and products are availible to our customers.</p>
+                        </div>
+                        <h2>Description</h2>
+                        <p>{product.description}</p>
+                    </div>
                 </div>
             </div>
         </main>
