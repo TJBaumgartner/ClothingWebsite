@@ -9,17 +9,48 @@ import SweaterWoman from '../../public/images/SweaterWoman.png'
 import ShirtWoman from '../../public/images/ShirtWoman.png'
 import PantsWoman from '../../public/images/PantsWoman.png'
 import ShoesWoman from '../../public/images/ShoesWoman.png'
+import { Products } from '../products'
 
 
 function Homepage() {
 
   const [menTab, setMenTab] = useState(true)
-  
+  const [products, setProducts] = useState()
+  const [slide, setSlide] = useState(0)
+  useEffect(() => {
+    const filteredProducts = Products.filter(product => {
+      if((product.category.includes('shirts') || product.category.includes('sweaters')) && product.gender == 'mens'){
+        return true
+      } else {
+        return false
+      }
+    })
+    setProducts(filteredProducts)
+  }, [])
+
   const changeBrowseTab = () => {
     setMenTab(!menTab)
     console.log(menTab)
   }
-
+  const previousSlide = () => {
+    if(slide > 4){
+      setSlide(slide - 5)
+    } else if(slide == 0) {
+      setSlide(8)
+    } else {
+      setSlide(0)
+    }
+  }
+  const nextSlide = () => {
+    console.log(slide)
+    if(slide < 5){
+      setSlide(slide + 5)
+    } else if(slide == 5){
+      setSlide(slide + 3)
+    } else{
+      setSlide(0)
+    }
+  }
     return (
     <main className='HomepageContainer'>
         <section>
@@ -38,9 +69,24 @@ function Homepage() {
             </div>
           </div>
         </section>
-        <section>
-          <h1>New Release</h1>
+        <section className='newReleases'>
+          <h1>New Releases</h1>
           <div className='slideshowContainer'>
+            <button onClick={() => previousSlide()} className='decreaseSlide'>&lt;</button>
+            <div className='slideShow'>
+                {products &&
+                  products.map((product, idx) => (
+                    <div className={(slide < idx && idx < slide +6) ? "slide" : "slideHidden"} key={idx}>
+                      <Link to={`/collections/${product.gender}/${product.category}/${product.id}`} state={{product}}>
+                        <img src={product.image}></img>
+                      </Link>
+                      {/* <img src={product.image}/> */}
+                      <h1>{product.name}</h1>
+                    </div>
+                  ))
+                }
+            </div>
+            <button onClick={() => nextSlide()} className='increaseSlide'>&gt;</button>
           </div>
         </section>
         <section className='browserContainer'>

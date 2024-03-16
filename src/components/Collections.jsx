@@ -32,25 +32,25 @@ function Collections() {
             return product.gender == sex &&
             <ProductCard product={product} key={product.id}></ProductCard>
           })
-        }
-        {category == 'arrivals' && products && true &&
-          products.sort((a, b) =>  b.price - a.price).map((product) => {
-            return product.gender == sex && product.newArrival == true &&
-            <ProductCard product={product} key={product.id}></ProductCard>
-          })
-        }
-        {category == 'sale' &&
-          products.sort((a, b) =>  b.price - a.price).map((product) => {
-            return product.gender == sex && product.onSale == true &&
-            <ProductCard product={product} key={product.id}></ProductCard>
-          })
-        }
-        {products && category !== 'arrivals' && category !== 'sale' &&
-          products.sort((a, b) =>  b.price - a.price).map((product) => {
-            return product.gender == sex && product.category == category &&
-            <ProductCard product={product} key={product.id}></ProductCard>
-          })
-        }
+      }
+      {category == 'arrivals' && products && true &&
+        products.sort((a, b) =>  b.price - a.price).map((product) => {
+          return product.gender == sex && product.newArrival == true &&
+          <ProductCard product={product} key={product.id}></ProductCard>
+        })
+      }
+      {category == 'sale' &&
+        products.sort((a, b) =>  b.price - a.price).map((product) => {
+          return product.gender == sex && product.onSale == true &&
+          <ProductCard product={product} key={product.id}></ProductCard>
+        })
+      }
+      {products && category !== 'arrivals' && category !== 'sale' &&
+        products.sort((a, b) =>  b.price - a.price).map((product) => {
+          return product.gender == sex && product.category == category &&
+          <ProductCard product={product} key={product.id}></ProductCard>
+        })
+      }
       </div>
     </main>
   </>

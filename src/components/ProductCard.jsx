@@ -3,7 +3,10 @@ import { Link } from 'react-router-dom'
 import '../App.css'
 function ProductCard(props) {
     const product = props.product
+    useEffect(() => {
+        window.scrollTo(0, 0);
 
+    }, [])
     return (
     <>
         <div className='productCard'>

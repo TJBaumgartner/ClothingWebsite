@@ -12,7 +12,9 @@ function ProductDetail() {
 
     const location = useLocation();
     const product = location.state.product
-
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
     const increaseQuantity = () => {
         if(quantity < 5){
             setQuantity(quantity+1)
@@ -51,15 +53,15 @@ function ProductDetail() {
                     <h1>Select Size:</h1>
                     <div className='sizeContainer'>
                         <input name='size' type='radio' id='XS'></input>
-                        <label for="XS">XS</label>
+                        <label htmlFor="XS">XS</label>
                         <input name='size' type='radio' id='S'></input>
-                        <label for="S">S</label>
+                        <label htmlFor="S">S</label>
                         <input name='size' type='radio' id='M'></input>
-                        <label for="M">M</label>
+                        <label htmlFor="M">M</label>
                         <input name='size' type='radio' id='L'></input>
-                        <label for="L">L</label>
+                        <label htmlFor="L">L</label>
                         <input name='size' type='radio' id='XL'></input>
-                        <label for="XL">XL</label>
+                        <label htmlFor="XL">XL</label>
                     </div>
                     <div className='quantityContainer'>
                         <h2>Quantity</h2>
