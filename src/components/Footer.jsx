@@ -1,10 +1,10 @@
-import {useEffect } from 'react'
+import {useEffect, useState } from 'react'
 import '../App.css'
 
 function Footer() {
     return (
     <main className='footerContainer'>
-        <h1>Footer</h1>
+      <h1>Footer</h1>
     </main>
   )
 }

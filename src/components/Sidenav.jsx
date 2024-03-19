@@ -26,7 +26,7 @@ function Sidenav(props) {
         <Link to={`${prepend}/sale`}>
             <h2>Sale</h2>
         </Link>
-        <Link to={`/collections/womens/dress`}>
+        <Link to={`/collections/womens/dresses`}>
             <h2>Dresses</h2>
         </Link>
         <Link to={`/collections/mens/suits`}>

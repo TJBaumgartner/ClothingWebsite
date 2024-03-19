@@ -27,19 +27,19 @@ function Collections() {
     <main className='collectionsContainer'>
       <Sidenav sex={sex}/>
       <div className='collectionsContent'>
-      {category == null && products && true &&
+      {category == null && products &&
           products.sort((a, b) =>  b.price - a.price).map((product) => {
             return product.gender == sex &&
             <ProductCard product={product} key={product.id}></ProductCard>
           })
       }
-      {category == 'arrivals' && products && true &&
+      {category == 'arrivals' && products &&
         products.sort((a, b) =>  b.price - a.price).map((product) => {
           return product.gender == sex && product.newArrival == true &&
           <ProductCard product={product} key={product.id}></ProductCard>
         })
       }
-      {category == 'sale' &&
+      {category == 'sale' && products &&
         products.sort((a, b) =>  b.price - a.price).map((product) => {
           return product.gender == sex && product.onSale == true &&
           <ProductCard product={product} key={product.id}></ProductCard>

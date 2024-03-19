@@ -17,6 +17,8 @@ function Homepage() {
   const [menTab, setMenTab] = useState(true)
   const [products, setProducts] = useState()
   const [slide, setSlide] = useState(0)
+  const [tabString, setTabString] = useState('mens')
+
   useEffect(() => {
     const filteredProducts = Products.filter(product => {
       if((product.newArrival == true)){
@@ -30,6 +32,11 @@ function Homepage() {
 
   const changeBrowseTab = () => {
     setMenTab(!menTab)
+    if(tabString == 'mens'){
+      setTabString('womens')
+    } else {
+      setTabString('mens')
+    }
     console.log(menTab)
   }
   const previousSlide = () => {
@@ -56,13 +63,13 @@ function Homepage() {
         <section>
           <div className='bannerPlaceholder'>
             <div className='bannerContent'>
-              <h1>Start Shopping</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <h1>Explore Our Collections</h1>
+              <p>We strive to provide the best clothing and service suitable for any occassion you might need.</p>
               <div className='buttonContainer'>
-                <Link to="collections/mens">
+                <Link to="/collections/mens">
                     <h2>Men's</h2>
                 </Link>
-                <Link to="collections/womens">
+                <Link to="/collections/womens">
                     <h2>Women's</h2>
                 </Link>              
               </div>
@@ -100,19 +107,27 @@ function Homepage() {
             <div className='browserImages'>
                 <div className='imagePlaceholder'>
                   <img src={SweaterMen}></img>
-                  <button>Sweaters</button>
+                  <Link to={`/collections/${tabString}/sweaters`}>
+                    <button>Sweaters</button>
+                  </Link>
                 </div>
                 <div className='imagePlaceholder'>
                   <img src={ShirtMen}></img>
-                  <button>Shirts</button>
+                  <Link to={`/collections/${tabString}/shirts`}>
+                    <button>Shirts</button>
+                  </Link>
                 </div>
                 <div className='imagePlaceholder'>
                   <img src={PantsMen}></img>
-                  <button>Pants</button>
+                  <Link to={`/collections/${tabString}/bottoms`}>
+                    <button>Pants</button>
+                  </Link>
                 </div>
                 <div className='imagePlaceholder'>
                   <img src={ShoesMen}></img>
-                  <button>Shoes</button>
+                  <Link to={`/collections/${tabString}/shoes`}>
+                    <button>Shoes</button>
+                  </Link>
                 </div>
             </div>
           </div>
@@ -126,19 +141,27 @@ function Homepage() {
             <div className='browserImages'>
               <div className='imagePlaceholder'>
                 <img src={SweaterWoman}></img>
-                <button>Sweaters</button>
+                <Link to={`/collections/${tabString}/sweaters`}>
+                    <button>Sweaters</button>
+                  </Link>
               </div>
               <div className='imagePlaceholder'>
                 <img src={ShirtWoman}></img>
-                <button>Shirts</button>
+                <Link to={`/collections/${tabString}/shirts`}>
+                    <button>Shirts</button>
+                  </Link>
               </div>
               <div className='imagePlaceholder'>
                 <img src={PantsWoman}></img>
-                <button>Pants</button>
+                <Link to={`/collections/${tabString}/bottoms`}>
+                    <button>Pants</button>
+                  </Link>
               </div>
               <div className='imagePlaceholder'>
                 <img src={ShoesWoman}></img>
-                <button>Shoes</button>
+                <Link to={`/collections/${tabString}/shoes`}>
+                    <button>Shoes</button>
+                </Link>
               </div>
             </div>
         </div>
@@ -149,19 +172,26 @@ function Homepage() {
           <div className='occassionDiv'>
             <div className='occassionContent'>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Shop the finest high quality suits for any occassion. Be it a wedding, formal gathering, or a buisiness meeting, our top of the line suits are sure to keep you fashionable and comfortable for wherever life takes you.
               </p>
-              <button>Men's Suits</button>
+              <Link to={`/collections/mens/suits`}>
+                    <button>Shop Suits</button>
+              </Link>
             </div>
-            <div className='occassionImageMen'></div>
-          </div>
+            <Link to={`/collections/mens/suits`}>
+              <div className='occassionImageMen'></div>
+            </Link>             </div>
           <div className="occassionDiv">
-            <div className='occassionImageWoman'></div>
+            <Link to={`/collections/womens/dresses`}>
+              <div className='occassionImageWoman'></div>
+            </Link>            
             <div className='occassionContent'>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Our premium quality dresses are perfect for looking and feeling great. We deliever dresses for all situations be it casual or professional to have you looking your best for your best moments.
               </p>
-              <button>Women's Dresses</button>
+              <Link to={`/collections/womens/dresses`}>
+                    <button>Shop Dresses</button>
+              </Link>            
             </div>
           </div>
         </section>
@@ -170,7 +200,9 @@ function Homepage() {
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </p>
-          <button>About</button>
+          <Link to={`/about`}>
+                    <button>About Us</button>
+          </Link>              
         </section>
     </main>
   )

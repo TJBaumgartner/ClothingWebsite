@@ -210,7 +210,6 @@
   margin-bottom: 3vh;
   margin-top: 3vh;
 }
-/* --accent-color: #EAE0CC; */
 .increaseSlide{
   background-color: #35605ab6;
   color: black;
@@ -353,6 +352,10 @@
   background-repeat: none;
   background-size: cover;
 }
+.occassionImageMen:hover, .occassionImageWoman:hover{
+  transform: scale(1.05); 
+  transition: ease-in-out .5;
+}
 .occassionImageWoman{
   height: 100%;
   background-image: url("/images/DressWoman.png");
@@ -364,9 +367,11 @@
 /* Homepage About Styling */
 
 .aboutContainer{
+  padding-top: 5vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 10vh;
 }
 .aboutContainer h1{
   font-size: 3rem;
@@ -514,6 +519,7 @@
 }
 .detailTop{
   height: 10%;
+  padding-bottom: 7rem;
 }
 .detailTop h2{
   padding-top: 1rem;
@@ -616,9 +622,6 @@
   color: white;
   transition: ease-in .15s;
 }
-.descriptionContainer{
-
-}
 .descriptionContainer p{
   font-size: 1.3rem;
 }
@@ -637,13 +640,24 @@
   padding-bottom: 1rem;
 }
 
+/* Sale Styling */
+/* Sale Styling */
+/* Sale Styling */
+
+.saleContainer{
+  width: 80%;
+  margin: auto;
+  height: 80vh;
+}
+
 /* Footer Styling */
 /* Footer Styling */
 /* Footer Styling */
 .footerContainer{
   width: 80%;
-  height: 40vh;
+  height: 30vh;
   margin: auto;
   background-color: white;
   border-top: 1px solid black;
 }
+
