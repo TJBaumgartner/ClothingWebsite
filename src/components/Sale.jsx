@@ -8,12 +8,13 @@ function Sale() {
     <main className='saleContainer'>
         <div className='saleBackground'>
           <h1>Vanilla Cosmetics</h1>
-          <div className='buttonContainer'>
+          <h2>Clearance Sale</h2>
+          <div className='saleButtonContainer'>
             <Link to="/collections/mens/sale">
-                <h2>Men's</h2>
+                <h3>Men's</h3>
             </Link>
             <Link to="/collections/womens/sale">
-                <h2>Women's</h2>
+                <h3>Women's</h3>
             </Link>              
           </div>
         </div>

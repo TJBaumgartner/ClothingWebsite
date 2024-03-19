@@ -145,7 +145,7 @@
   width: 35%;
   border: none;
   font-size: 1.1rem;
-  color: black;
+  color: #2b2e2f;
   border: 2px solid var(--main-color);
   background-color: white;
   border-radius: 2px;
@@ -212,7 +212,7 @@
 }
 .increaseSlide{
   background-color: #35605ab6;
-  color: black;
+  color: #2b2e2f;
   padding: .3rem;
   font-size: 2rem;
   position: absolute;
@@ -648,6 +648,51 @@
   width: 80%;
   margin: auto;
   height: 80vh;
+  margin-top: 10vh;
+}
+.saleBackground{
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  background-color: var(--accent-color);
+  height: 70vh;
+}
+.saleBackground h1{
+ font-size: 2.5rem;
+ padding-top: 5vh;
+ font-weight: 400;
+}
+.saleBackground h2{
+  padding-top: 10vh;
+  font-size: 2.5rem;
+  font-weight: 900;
+  padding-bottom: 2vh;
+}
+.saleButtonContainer{
+  width: 50%;
+  margin: auto;
+}
+.saleButtonContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1.3rem;
+}
+.saleButtonContainer a{
+  padding: 15px;
+  width: 45%;
+  border: none;
+  font-size: 1.1rem;
+  color: #2b2e2f;
+  border: 2px solid var(--main-color);
+  background-color: white;
+  border-radius: 2px;
+  text-align: center;
+}
+.saleButtonContainer a:hover{
+  background-color: var(--main-color);
+  color: white;
+  transition: ease-in 0.35s;
 }
 
 /* Footer Styling */
@@ -658,6 +703,6 @@
   height: 30vh;
   margin: auto;
   background-color: white;
-  border-top: 1px solid black;
+  border-top: 1px solid #2b2e2f;
 }
 
