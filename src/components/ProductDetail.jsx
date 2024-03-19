@@ -1,5 +1,5 @@
 import {useEffect, useState } from 'react'
-import { useLocation } from 'react-router-dom'
+import { useLocation, Link } from 'react-router-dom'
 import '../App.css'
 import NavBanner from './NavBanner';
 import { Products } from '../products';
@@ -14,49 +14,19 @@ function ProductDetail() {
     const location = useLocation();
     const product = location.state.product
 
-    
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [])
+
     useEffect(() => {
         const filteredProducts = Products.filter(similarProduct => {
-        if((similarProduct.category == product.category && similarProduct.gender == product.gender)){
-          return true
+        if((similarProduct.trending == true && similarProduct.gender == product.gender && similarProduct.name !== product.name)){
+            return true
         } else {
-          return false
+            return false
         }
-      })
-      console.log(filteredProducts)
-      setSlideProducts(filteredProducts)
+        })
+        console.log(filteredProducts)
+        setSlideProducts(filteredProducts)
+        window.scrollTo(0, 0);
     }, [])
-    // useEffect(() => {
-    //     const shuffle = (array) => {
-    //       for (var i = array.length - 1; i > 0; i--) {
-    //         var j = Math.floor(Math.random() * (i + 1));
-    //         var temp = array[i];
-    //         array[i] = array[j];
-    //         array[j] = temp;
-    //       }
-    //     };
-      
-    // const fetchPokemon = async () => {
-    //     //here I fetch my pokemon
-    //     const promises = [];
-    //     for (let i = 1; i <= 10; i++) {
-    //     let url = `https://pokeapi.co/api/v2/pokemon/${i}`;
-    //     let response = await fetch(url);
-    //     let result = await response.json();
-    //     promises.push(result);
-    //     }
-    
-    //     const data = await Promise.all(promises);
-    //     shuffle(data);
-    //     setPokemon(data);
-    // };
-    // fetchPokemon();
-    // }, []);
-
-
 
     const increaseQuantity = () => {
         if(quantity < 5){
@@ -69,6 +39,21 @@ function ProductDetail() {
         }
     }
 
+    const previousSlide = () => {
+        if(slide > 0){
+            setSlide(slide-1)
+        } else {
+            setSlide(slideProducts.length -6)
+        }
+    }
+    const nextSlide = () => {
+        console.log(slideProducts.length - 4)
+        if(slide < slideProducts.length - 6){
+            setSlide(slide+1)
+        } else {
+            setSlide(0)
+        }
+    }
     return (
     <>
         <NavBanner/>
@@ -130,6 +115,25 @@ function ProductDetail() {
                 </div>
             </div>
         </main>
+        <section className='trending'>
+          <h1>Trending</h1>
+          <div className='slideshowContainer'>
+            <button onClick={() => previousSlide()} className='decreaseSlide'>&lt;</button>
+            <div className='slideShow'>
+                {slideProducts &&
+                  slideProducts.map((product, idx) => (
+                    <div className={(slide < idx && idx < slide +6) ? "slide" : "slideHidden"} key={idx}>
+                      <Link to={`/collections/${product.gender}/${product.category}/${product.id}`} state={{product}}>
+                        <img src={product.image} onClick={() => window.scrollTo(0,0)}></img>
+                      </Link>
+                      <h2>{product.name}</h2>
+                    </div>
+                  ))
+                }
+            </div>
+            <button onClick={() => nextSlide()} className='increaseSlide'>&gt;</button>
+          </div>
+        </section>
     </>
   )
 }

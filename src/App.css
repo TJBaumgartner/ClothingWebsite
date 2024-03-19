@@ -200,6 +200,19 @@
 .slideHidden{
   display: none;
 }
+.trending{
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
+.trending img{
+  border: 2px dotted var(--main-color);
+}
+.trending h1{
+  font-size: 2rem;
+  margin-bottom: 3vh;
+  margin-top: 3vh;
+}
 /* --accent-color: #EAE0CC; */
 .increaseSlide{
   background-color: #35605ab6;
@@ -483,9 +496,10 @@
   grid-template-columns: 1fr 2fr 2fr;
   width: 80%;
   margin: auto;
-  padding: 5vh 0 5vh 0;
+  padding: 5vh 0 10vh 0;
   background-color: white;
   min-height: 100vh;
+  border-bottom: 1px solid var(--main-color);
 }
 .detailContainer img{
   width: 90%;
@@ -498,17 +512,21 @@
   width: 100%;
   grid-column: 3/4;
   height: 100%;
-  border-left: 3px solid var(--main-color);
+  border-left: 2px solid var(--main-color);
   padding-left: 10%;
 }
 .detailTop{
   height: 10%;
 }
+.detailTop h2{
+  padding-top: 1rem;
+  font-size: 1.6rem;
+}
 .clearanceContainer h2{
   font-size: 1.6rem;
 }
 .detailMiddle{
-  border-top: 3px solid var(--main-color);
+  border-top: 2px solid var(--main-color);
   display: flex;
   flex-direction: column;
   margin-top: 2rem;
@@ -516,9 +534,9 @@
 }
 .sizeContainer{
   display: flex;
-  justify-content: space-between;
-  gap: 1rem;
+  justify-content: space-around;
   margin-top: 1rem;
+  width: 60%;
 }
 .detailMiddle input[type="radio"]{
   opacity: 0;
@@ -527,10 +545,10 @@
 }
 .detailMiddle label{
   background-color: white;
-  flex: 1 1 0;
-  border: 1px solid var(--main-color);
-  padding: 1rem 1rem;
-  font-size: 2rem;
+  border: 2px solid var(--main-color);
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
   text-align: center;
 }
 .detailMiddle label:hover{
@@ -551,7 +569,7 @@
 .sideButton{
   padding: .5rem;
   border: none;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   border: 2px solid var(--main-color);
   background-color: white;
   border-radius: 2px;
@@ -564,11 +582,11 @@
   transition: ease-in .1s;
 }
 .quantityButton{
-  padding: 1.5rem;
+  padding: 1rem;
   border: none;
   font-size: 1.5rem;
   font-weight: 900;
-  border: 3px solid var(--main-color);
+  border: 2px solid var(--main-color);
   background-color: white;
   border-radius: 2px;
   margin-left: 1.3rem;
@@ -589,8 +607,8 @@
   width: 100%;
   padding: 15px;
   border: none;
-  font-size: 2rem;
-  border: 3px solid var(--main-color);
+  font-size: 1.7rem;
+  border: 2px solid var(--main-color);
   background-color: white;
   border-radius: 2px;
   text-align: center;
@@ -605,7 +623,7 @@
 
 }
 .descriptionContainer p{
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .descriptionContainer h2{
   font-size: 2rem;
@@ -616,8 +634,12 @@
   text-align: center;
   padding-top: 1rem;
   margin: 2rem 0 2rem 0;
-  border-top: 3px solid var(--main-color);
+  border-top: 2px solid var(--main-color);
 }
+.guarantee h1{
+  padding-bottom: 1rem;
+}
+
 /* Footer Styling */
 /* Footer Styling */
 /* Footer Styling */
