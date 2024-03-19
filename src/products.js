@@ -1,6 +1,5 @@
 import { faL, faLessThan } from "@fortawesome/free-solid-svg-icons"
 import {v4 as uuid} from "uuid"
-// import product1 from "./assests/1.png"
 export const Products = [
     //Pants Men
     {
