@@ -20,13 +20,13 @@ function Navbar() {
                     <h2>Womens</h2>
                 </Link>
                 <Link to="collections/sale">
-                    <h2>Sale</h2>
-                </Link>
-                <Link to="/about">
-                    <h2>About</h2>
+                    <h2 className='saleTab'>Sale</h2>
                 </Link>
             </div>
             <div className='NavbarRight'>
+                <Link to="/about">
+                    <h2>About Us</h2>
+                </Link>
                 <i className="fa fa-shopping-cart"></i>
             </div>
         </div>

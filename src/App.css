@@ -50,7 +50,7 @@
 }
 .Navbar h2:hover{
   border-bottom: 2px solid var(--main-color);
-  line-height: 7.8vh;
+  line-height: 7.7vh;
 }
 .NavbarRight{
   display: inherit;
@@ -59,12 +59,15 @@
   width: 20%;
   margin-right: 5%;
 }
+.NavbarRight h2{
+  margin-right: 2rem;
+}
 
 .NavbarLeft{
   width: 40%;
   display: inherit;
   flex-direction: inherit;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 .Logo{
   padding: 5px 0px 5px 0px;
@@ -643,7 +646,9 @@
 /* Sale Styling */
 /* Sale Styling */
 /* Sale Styling */
-
+.saleTab{
+  color: rgb(116, 31, 31);
+}
 .saleContainer{
   width: 80%;
   margin: auto;
@@ -694,7 +699,6 @@
   color: white;
   transition: ease-in 0.35s;
 }
-
 /* Footer Styling */
 /* Footer Styling */
 /* Footer Styling */
