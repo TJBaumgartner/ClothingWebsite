@@ -13,6 +13,7 @@ export const Products = [
         newArrival: false,
         image: "/images/MP1.png",
         onSale: true,
+        trending: true,
     },
     {
         id: uuid(),
@@ -24,6 +25,7 @@ export const Products = [
         newArrival: false,
         image: "/images/MP2.png",
         onSale: true,
+        trending: false,
     },
     {
         id: uuid(),
@@ -35,6 +37,7 @@ export const Products = [
         newArrival: false,
         image: "/images/MP3.png",
         onSale: false,
+        trending: false,
     },
     {
         id: uuid(),
@@ -46,6 +49,7 @@ export const Products = [
         newArrival: true,
         image: "/images/MP4.png",
         onSale: false,
+        trending: true,
     },
     {
         id: uuid(),
@@ -57,6 +61,7 @@ export const Products = [
         newArrival: false,
         image: "/images/MP5.png",
         onSale: false,
+        trending: false,
     },
    
     //Shirts male
@@ -70,6 +75,7 @@ export const Products = [
         newArrival: true,
         image: "/images/MS1.png",
         onSale: false,
+        trending: false,
     },
     {
         id: uuid(),
@@ -81,6 +87,7 @@ export const Products = [
         newArrival: false,
         image: "/images/MS2.png",
         onSale: true,
+        trending: true,
     },
     {
         id: uuid(),
@@ -92,6 +99,7 @@ export const Products = [
         newArrival: false,
         image: "/images/MS3.png",
         onSale: true,
+        trending: false,
     },
     {
         id: uuid(),
@@ -103,6 +111,7 @@ export const Products = [
         newArrival: false,
         image: "/images/MS4.png",
         onSale: true,
+        trending: false,
     },
     {
         id: uuid(),
@@ -114,6 +123,7 @@ export const Products = [
         newArrival: false,
         image: "/images/MS5.png",
         onSale: true,
+        trending: false,
     },
     {
         id: uuid(),
@@ -125,6 +135,7 @@ export const Products = [
         newArrival: true,
         image: "/images/MS6.png",
         onSale: false,
+        trending: true,
     },
     {
         id: uuid(),
@@ -136,6 +147,7 @@ export const Products = [
         newArrival: true,
         image: "/images/MS7.png",
         onSale: false,
+        trending: false,
     },
     //Sweaters/Hoodies male
     {
@@ -148,6 +160,7 @@ export const Products = [
         newArrival: false,
         image: "/images/MH1.png",
         onSale: true,
+        trending: false,
     },
     {
         id: uuid(),
@@ -159,6 +172,7 @@ export const Products = [
         newArrival: false,
         image: "/images/MH2.png",
         onSale: false,
+        trending: false,
     },
     {
         id: uuid(),
@@ -170,6 +184,7 @@ export const Products = [
         newArrival: false,
         image: "/images/MH3.png",
         onSale: false,
+        trending: true,
     },
     {
         id: uuid(),
@@ -181,6 +196,7 @@ export const Products = [
         newArrival: false,
         image: "/images/MH4.png",
         onSale: true,
+        trending: false,
     },
     {
         id: uuid(),
@@ -192,6 +208,7 @@ export const Products = [
         newArrival: true,
         image: "/images/MH5.png",
         onSale: false,
+        trending: true,
     },
     {
         id: uuid(),
@@ -203,6 +220,7 @@ export const Products = [
         newArrival: false,
         image: "/images/MH6.png",
         onSale: true,
+        trending: false,
     },
     {
         id: uuid(),
@@ -214,6 +232,7 @@ export const Products = [
         newArrival: false,
         image: "/images/MH7.png",
         onSale: true,
+        trending: false,
     },
     //Shoes male
     {
@@ -226,6 +245,7 @@ export const Products = [
         newArrival: false,
         image: "/images/MF1.png",
         onSale: true,
+        trending: false,
     },
     {
         id: uuid(),
@@ -237,6 +257,7 @@ export const Products = [
         newArrival: false,
         image: "/images/MF2.png",
         onSale: true,
+        trending: true,
     },
     {
         id: uuid(),
@@ -248,6 +269,7 @@ export const Products = [
         newArrival: true,
         image: "/images/MF3.png",
         onSale: false,
+        trending: false,
     },
     {
         id: uuid(),
@@ -259,6 +281,7 @@ export const Products = [
         newArrival: false,
         image: "/images/MF4.png",
         onSale: false,
+        trending: false,
     },
     //Suits male
     {
@@ -271,6 +294,7 @@ export const Products = [
         newArrival: true,
         image: "/images/MSUIT1.png",
         onSale: false,
+        trending: false,
     },
     {
         id: uuid(),
@@ -282,6 +306,7 @@ export const Products = [
         newArrival: false,
         image: "/images/MSUIT2.png",
         onSale: false,
+        trending: false,
     },
     {
         id: uuid(),
@@ -293,6 +318,7 @@ export const Products = [
         newArrival: false,
         image: "/images/MSUIT3.png",
         onSale: true,
+        trending: false,
     },
     {
         id: uuid(),
@@ -304,6 +330,7 @@ export const Products = [
         newArrival: false,
         image: "/images/MSUIT4.png",
         onSale: false,
+        trending: false,
     },
 
 
@@ -320,6 +347,7 @@ export const Products = [
         newArrival: true,
         image: "/images/FP1.png",
         onSale: false,
+        trending: false,
     },
     {
         id: uuid(),
@@ -331,6 +359,7 @@ export const Products = [
         newArrival: false,
         image: "/images/FP2.png",
         onSale: true,
+        trending: false,
     },
     {
         id: uuid(),
@@ -342,6 +371,7 @@ export const Products = [
         newArrival: false,
         image: "/images/FP3.png",
         onSale: false,
+        trending: true,
     },    
     {
         id: uuid(),
@@ -353,6 +383,7 @@ export const Products = [
         newArrival: false,
         image: "/images/FP4.png",
         onSale: true,
+        trending: true,
     },    
     {
         id: uuid(),
@@ -364,6 +395,7 @@ export const Products = [
         newArrival: true,
         image: "/images/FP5.png",
         onSale: false,
+        trending: false,
     },    
     //Shirts female
     {
@@ -376,6 +408,7 @@ export const Products = [
         newArrival: true,
         image: "/images/FS1.png",
         onSale: true,
+        trending: true,
     },
     {
         id: uuid(),
@@ -387,6 +420,7 @@ export const Products = [
         newArrival: true,
         image: "/images/FS2.png",
         onSale: false,
+        trending: false,
     },
     {
         id: uuid(),
@@ -398,6 +432,7 @@ export const Products = [
         newArrival: false,
         image: "/images/FS3.png",
         onSale: true,
+        trending: false,
     },
     {
         id: uuid(),
@@ -409,6 +444,7 @@ export const Products = [
         newArrival: false,
         image: "/images/FS4.png",
         onSale: true,
+        trending: false,
     },
     {
         id: uuid(),
@@ -420,6 +456,7 @@ export const Products = [
         newArrival: true,
         image: "/images/FS5.png",
         onSale: false,
+        trending: false,
     },
     {
         id: uuid(),
@@ -431,6 +468,7 @@ export const Products = [
         newArrival: false,
         image: "/images/FS6.png",
         onSale: false,
+        trending: false,
     },
     {
         id: uuid(),
@@ -442,6 +480,7 @@ export const Products = [
         newArrival: false,
         image: "/images/FS7.png",
         onSale: false,
+        trending: false,
     },
     //Sweaters/Hoodies female
     {
@@ -454,6 +493,7 @@ export const Products = [
         newArrival: true,
         image: "/images/FH1.png",
         onSale: false,
+        trending: true,
     },
     {
         id: uuid(),
@@ -465,6 +505,7 @@ export const Products = [
         newArrival: true,
         image: "/images/FH2.png",
         onSale: true,
+        trending: false,
     },
     {
         id: uuid(),
@@ -476,6 +517,7 @@ export const Products = [
         newArrival: false,
         image: "/images/FH3.png",
         onSale: true,
+        trending: true,
     },
     {
         id: uuid(),
@@ -487,6 +529,7 @@ export const Products = [
         newArrival: true,
         image: "/images/FH4.png",
         onSale: false,
+        trending: false,
     },
     {
         id: uuid(),
@@ -498,6 +541,7 @@ export const Products = [
         newArrival: false,
         image: "/images/FH5.png",
         onSale: false,
+        trending: false,
     },
     {
         id: uuid(),
@@ -509,6 +553,7 @@ export const Products = [
         newArrival: false,
         image: "/images/FH6.png",
         onSale: true,
+        trending: false,
     },
     {
         id: uuid(),
@@ -520,6 +565,7 @@ export const Products = [
         newArrival: true,
         image: "/images/FH7.png",
         onSale: false,
+        trending: false,
     },
     //Shoes female
     {
@@ -532,6 +578,7 @@ export const Products = [
         newArrival: false,
         image: "/images/FF4.png",
         onSale: false,
+        trending: false,
     },
     {
         id: uuid(),
@@ -543,6 +590,7 @@ export const Products = [
         newArrival: false,
         image: "/images/FF3.png",
         onSale: true,
+        trending: true,
     },
     {
         id: uuid(),
@@ -554,6 +602,7 @@ export const Products = [
         newArrival: false,
         image: "/images/FF2.png",
         onSale: true,
+        trending: false,
     },
     {
         id: uuid(),
@@ -565,6 +614,7 @@ export const Products = [
         newArrival: true,
         image: "/images/FF1.png",
         onSale: false,
+        trending: false,
     },
     //Dress female
     {
@@ -577,6 +627,7 @@ export const Products = [
         newArrival: true,
         image: "/images/FDRESS4.png",
         onSale: false,
+        trending: true,
     },
     {
         id: uuid(),
@@ -588,6 +639,7 @@ export const Products = [
         newArrival: false,
         image: "/images/FDRESS3.png",
         onSale: true,
+        trending: false,
     },
     {
         id: uuid(),
@@ -599,6 +651,7 @@ export const Products = [
         newArrival: false,
         image: "/images/FDRESS2.png",
         onSale: true,
+        trending: false,
     },
     {
         id: uuid(),
@@ -610,5 +663,6 @@ export const Products = [
         newArrival: true,
         image: "/images/FDRESS1.png",
         onSale: false,
+        trending: false,
     },
 ]

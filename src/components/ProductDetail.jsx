@@ -2,19 +2,62 @@ import {useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import '../App.css'
 import NavBanner from './NavBanner';
+import { Products } from '../products';
 
 function ProductDetail() {
-
-
+    
+    
     const [quantity, setQuantity] = useState(1)
-
-
-
+    
+    const [slideProducts, setSlideProducts] = useState()
+    const [slide, setSlide] = useState(0)
     const location = useLocation();
     const product = location.state.product
+
+    
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [])
+    useEffect(() => {
+        const filteredProducts = Products.filter(similarProduct => {
+        if((similarProduct.category == product.category && similarProduct.gender == product.gender)){
+          return true
+        } else {
+          return false
+        }
+      })
+      console.log(filteredProducts)
+      setSlideProducts(filteredProducts)
+    }, [])
+    // useEffect(() => {
+    //     const shuffle = (array) => {
+    //       for (var i = array.length - 1; i > 0; i--) {
+    //         var j = Math.floor(Math.random() * (i + 1));
+    //         var temp = array[i];
+    //         array[i] = array[j];
+    //         array[j] = temp;
+    //       }
+    //     };
+      
+    // const fetchPokemon = async () => {
+    //     //here I fetch my pokemon
+    //     const promises = [];
+    //     for (let i = 1; i <= 10; i++) {
+    //     let url = `https://pokeapi.co/api/v2/pokemon/${i}`;
+    //     let response = await fetch(url);
+    //     let result = await response.json();
+    //     promises.push(result);
+    //     }
+    
+    //     const data = await Promise.all(promises);
+    //     shuffle(data);
+    //     setPokemon(data);
+    // };
+    // fetchPokemon();
+    // }, []);
+
+
+
     const increaseQuantity = () => {
         if(quantity < 5){
             setQuantity(quantity+1)
@@ -25,6 +68,7 @@ function ProductDetail() {
             setQuantity(quantity-1)
         }
     }
+
     return (
     <>
         <NavBanner/>

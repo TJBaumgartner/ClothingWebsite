@@ -396,6 +396,7 @@
   padding-top: 5vh;
   background-color: white;
   min-height: 100vh;
+  padding-bottom: 5vh;
 }
 .collectionsContent{
   width: 80%;
@@ -415,7 +416,7 @@
   grid-column: 1/2;
   grid-row: auto;
   align-self: start;
-  height: 40vh;
+  height: 48vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
