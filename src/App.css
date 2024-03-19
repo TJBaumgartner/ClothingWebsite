@@ -482,7 +482,7 @@
   grid-template-columns: 1fr 2fr 2fr;
   width: 80%;
   margin: auto;
-  padding-top: 5vh;
+  padding: 5vh 0 5vh 0;
   background-color: white;
   min-height: 100vh;
 }
@@ -501,16 +501,17 @@
   padding-left: 10%;
 }
 .detailTop{
-  border-bottom: 1px solid black;
   height: 10%;
 }
 .clearanceContainer h2{
   font-size: 1.6rem;
 }
 .detailMiddle{
+  border-top: 3px solid var(--main-color);
   display: flex;
   flex-direction: column;
   margin-top: 2rem;
+  padding-top: 1.5rem;
 }
 .sizeContainer{
   display: flex;
@@ -547,7 +548,7 @@
   margin-bottom: .5rem;
 }
 .sideButton{
-  padding: 1rem;
+  padding: .5rem;
   border: none;
   font-size: 1.5rem;
   border: 2px solid var(--main-color);
@@ -562,8 +563,7 @@
   transition: ease-in .1s;
 }
 .quantityButton{
-  padding: 2rem;
-  width: 8rem;
+  padding: 1.5rem;
   border: none;
   font-size: 1.5rem;
   font-weight: 900;
@@ -611,7 +611,7 @@
   font-weight: 600;
   margin-bottom: 1rem;
 }
-.gaurentee{
+.guarantee{
   text-align: center;
   padding-top: 1rem;
   margin: 2rem 0 2rem 0;

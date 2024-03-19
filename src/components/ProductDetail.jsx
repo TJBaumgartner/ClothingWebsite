@@ -76,8 +76,8 @@ function ProductDetail() {
                         <p>Free Shipping Over $99</p>
                     </div>
                     <div className='descriptionContainer'>
-                        <div className='gaurentee'>
-                            <h1>Quality Gaurentee!</h1>
+                        <div className='guarantee'>
+                            <h1>Quality Guarantee!</h1>
                             <p>We strive to ensure only the best quality material and products are availible to our customers.</p>
                         </div>
                         <h2>Description</h2>

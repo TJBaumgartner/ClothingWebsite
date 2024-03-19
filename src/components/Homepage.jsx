@@ -19,7 +19,7 @@ function Homepage() {
   const [slide, setSlide] = useState(0)
   useEffect(() => {
     const filteredProducts = Products.filter(product => {
-      if((product.category.includes('shirts') || product.category.includes('sweaters')) && product.gender == 'mens'){
+      if((product.newArrival == true)){
         return true
       } else {
         return false
