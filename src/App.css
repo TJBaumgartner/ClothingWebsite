@@ -205,9 +205,6 @@
   width: 80%;
   margin: auto;
 }
-.trending img{
-  border: 2px dotted var(--main-color);
-}
 .trending h1{
   font-size: 2rem;
   margin-bottom: 3vh;
