@@ -26,12 +26,15 @@ function Sidenav(props) {
         <Link to={`${prepend}/sale`}>
             <h2>Sale</h2>
         </Link>
-        <Link to={`/collections/womens/dresses`}>
-            <h2>Dresses</h2>
-        </Link>
+        {sex == 'mens' ?
         <Link to={`/collections/mens/suits`}>
             <h2>Suits</h2>
         </Link>
+        :
+        <Link to={`/collections/womens/dresses`}>
+            <h2>Dresses</h2>
+        </Link>
+        }
     </nav>
   )
 }
