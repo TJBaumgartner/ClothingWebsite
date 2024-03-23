@@ -405,7 +405,20 @@
 /* Collections Styling */
 /* Collections Styling */
 /* Collections Styling */
-
+.filterContainer{
+  height: 10vh;
+  width: 54%;
+  margin: auto;
+  margin-top: 5vh;
+  display: flex;
+  justify-content: right;
+}
+.filterContainer select{
+  padding: 1rem;
+  height: 60%;
+  font-size: 1rem;
+  border-radius: 0;
+}
 .collectionsContainer{
   display: grid;
   grid-template-columns: 1fr 4fr;
