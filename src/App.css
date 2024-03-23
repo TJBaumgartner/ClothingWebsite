@@ -575,7 +575,7 @@
 .sideButton{
   padding: .5rem;
   border: none;
-  font-size: 1.2rem;
+  font-size: 1rem;
   border: 2px solid var(--main-color);
   background-color: white;
   border-radius: 2px;
@@ -590,13 +590,13 @@
 .quantityButton{
   padding: 1rem;
   border: none;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 900;
   border: 2px solid var(--main-color);
   background-color: white;
   border-radius: 2px;
-  margin-left: 1.3rem;
-  margin-right: 1.3rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
   text-align: center;
 }
 .addCartContainer{
@@ -703,10 +703,45 @@
 /* Footer Styling */
 /* Footer Styling */
 .footerContainer{
-  width: 80%;
   height: 30vh;
   margin: auto;
   background-color: white;
-  border-top: 1px solid #2b2e2f;
+  background-color: #2b2e2f;
 }
-
+.footerContent{
+  border-top: 1px solid #2b2e2f;
+  width: 80%;
+  padding-top: 3vh;
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+.footerColumn ul{
+  padding-top: 1rem;
+}
+.footerColumn h1{
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  border-bottom: 1px solid var(--accent-color);
+  padding-bottom: .5rem;
+}
+.footerColumn li{
+  font-size: 1rem;
+  padding-top: .5rem;
+}
+.footerColumn li:hover{
+  font-weight: 700;
+  color: var(--accent-color);
+}
+.icons ul{
+  display: flex;
+  flex-direction: row;
+}
+.footerBottom{
+  margin-top: 5vh;
+  height: 10vh;
+  background-color: var(--main-color);
+  width: 100%;
+}

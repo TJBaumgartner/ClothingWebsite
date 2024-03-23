@@ -80,18 +80,33 @@ function ProductDetail() {
                 </div>
                 <div className='detailMiddle'>
                     <h1>Select Size:</h1>
-                    <div className='sizeContainer'>
-                        <input name='size' type='radio' id='XS'></input>
-                        <label htmlFor="XS">XS</label>
-                        <input name='size' type='radio' id='S'></input>
-                        <label htmlFor="S">S</label>
-                        <input name='size' type='radio' id='M'></input>
-                        <label htmlFor="M">M</label>
-                        <input name='size' type='radio' id='L'></input>
-                        <label htmlFor="L">L</label>
-                        <input name='size' type='radio' id='XL'></input>
-                        <label htmlFor="XL">XL</label>
-                    </div>
+                    {product.category == 'shoes' ? 
+                        <div className='sizeContainer'>
+                            <input name='size' type='radio' id='XS'></input>
+                            <label htmlFor="XS">8</label>
+                            <input name='size' type='radio' id='S'></input>
+                            <label htmlFor="S">8.5</label>
+                            <input name='size' type='radio' id='M'></input>
+                            <label htmlFor="M">9</label>
+                            <input name='size' type='radio' id='L'></input>
+                            <label htmlFor="L">9.5</label>
+                            <input name='size' type='radio' id='XL'></input>
+                            <label htmlFor="XL">10</label>
+                        </div>
+                    :
+                        <div className='sizeContainer'>
+                            <input name='size' type='radio' id='XS'></input>
+                            <label htmlFor="XS">XS</label>
+                            <input name='size' type='radio' id='S'></input>
+                            <label htmlFor="S">S</label>
+                            <input name='size' type='radio' id='M'></input>
+                            <label htmlFor="M">M</label>
+                            <input name='size' type='radio' id='L'></input>
+                            <label htmlFor="L">L</label>
+                            <input name='size' type='radio' id='XL'></input>
+                            <label htmlFor="XL">XL</label>
+                        </div>
+                    }
                     <div className='quantityContainer'>
                         <h2>Quantity</h2>
                         <div>
