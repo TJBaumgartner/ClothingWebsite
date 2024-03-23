@@ -5,4 +5,4 @@ Project of a clothing website frontend made using react as a framework.
 
 ## Demo
 
-https://tjbaumgartner.github.io/ClothingWebsite/
+https://clothing-website-65aghlwj0-tjbaumgartners-projects.vercel.app/
