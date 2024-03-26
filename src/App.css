@@ -369,23 +369,23 @@
 /* Homepage About Styling */
 /* Homepage About Styling */
 
-.aboutContainer{
+.homeAboutContainer{
   padding-top: 5vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 10vh;
 }
-.aboutContainer h1{
+.homeAboutContainer h1{
   font-size: 3rem;
   margin-bottom: 1rem;
 }
-.aboutContainer p{
+.homeAboutContainer p{
   width: 60%;
   margin: auto;
   font-size: 1.8rem;
 }
-.aboutContainer button{
+.homeAboutContainer button{
   padding: 15px;
   width: 200px;
   border: none;
@@ -396,7 +396,7 @@
   margin-right: 20px;
   font-weight: 700;
 }
-.aboutContainer button:hover{
+.homeAboutContainer button:hover{
   background-color: var(--main-color);
   color: white;
   transition: ease-in 0.35s;
@@ -712,6 +712,17 @@
   color: white;
   transition: ease-in 0.35s;
 }
+
+/* About Styling */
+/* About Styling */
+/* About Styling */
+.aboutContainer{
+
+}
+.aboutBanner{
+  
+}
+
 /* Footer Styling */
 /* Footer Styling */
 /* Footer Styling */
@@ -757,4 +768,9 @@
   height: 10vh;
   background-color: var(--main-color);
   width: 100%;
+}
+.footerBottom p{
+  color: white;
+  text-align: center;
+  line-height: 10vh;
 }

@@ -45,7 +45,7 @@ function Footer() {
         </div>
       </div>
       <div className='footerBottom'>
-        
+        <p>© 2024 Terrence Baumgartner | All Rights Reserved | Vanilla Cosmetics</p>
       </div>
     </footer>
   )
