@@ -64,7 +64,7 @@
 }
 
 .NavbarLeft{
-  width: 40%;
+  width: 50%;
   display: inherit;
   flex-direction: inherit;
   justify-content: space-evenly;
@@ -678,6 +678,7 @@
   background-color: var(--accent-color);
   height: 70vh;
 }
+
 .saleBackground h1{
  font-size: 2.5rem;
  padding-top: 5vh;
@@ -743,17 +744,18 @@
 }
 .aboutBannerContent p{
   padding: 2vh 0 2vh 0;
+  font-size: 1.3rem;
 }
 .aboutBannerContent button{
-    padding: 15px;
-    width: 200px;
-    border: none;
-    font-size: 1.1rem;
-    color: var(--main-color);
-    border: 2px solid var(--main-color);
-    border-radius: 2px;
-    margin-right: 20px;
-    font-weight: 700;
+  padding: 15px;
+  width: 200px;
+  border: none;
+  font-size: 1.1rem;
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
+  border-radius: 2px;
+  margin-right: 20px;
+  font-weight: 700;
 }
 .aboutBannerContent button:hover{
   background-color: var(--main-color);
@@ -771,14 +773,31 @@
 }
 .aboutImage{
   width: 50%;
+  height: 75vh;
 }
 .aboutImage img{
   width: 100%;
-  height: auto;
+  height: 75vh;
 }
 .aboutText{
   width: 50%;
   background-color: var(--accent-color);
+  position: relative;
+  text-align: center;
+}
+.aboutText div{
+  position: absolute;
+  width: 60%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+.aboutText h1{
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.aboutText p{
+  font-size: 1.5rem;
 }
 .aboutBottom{
 

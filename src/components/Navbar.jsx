@@ -19,6 +19,9 @@ function Navbar() {
                 <Link to="/collections/womens">
                     <h2>Womens</h2>
                 </Link>
+                <Link to="/collections/newArrivals">
+                    <h2>New Arrivals</h2>
+                </Link>
                 <Link to="collections/sale">
                     <h2 className='saleTab'>Sale</h2>
                 </Link>
