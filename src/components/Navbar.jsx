@@ -5,7 +5,8 @@ import Logo from '../../public/images/VanillaLogo.png'
 import 'font-awesome/css/font-awesome.min.css';
 
 
-function Navbar() {
+function Navbar(props) {
+    const showCart = props.showCart;
     return (
     <nav className='NavbarContainer'>
         <div className='Navbar'>
@@ -30,7 +31,7 @@ function Navbar() {
                 <Link to="/about">
                     <h2>About Us</h2>
                 </Link>
-                <i className="fa fa-shopping-cart"></i>
+                <i className="fa fa-shopping-cart" onClick={() => showCart()}></i>
             </div>
         </div>
     </nav>

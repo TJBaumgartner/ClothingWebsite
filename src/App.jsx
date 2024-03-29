@@ -10,10 +10,15 @@ import Collections from './components/Collections';
 import ProductDetail from './components/ProductDetail'
 import Sale from './components/Sale';
 import NewArrivals from './components/NewArrivals';
+import Cart from './components/Cart';
 function App() {
+  const [displayCart, setDisplayCart] = useState(false)
+  const [cartItems, setCartItems] = useState([])
+  const showCart = () => setDisplayCart(!displayCart)
   return (
     <div className='AppContainer'>
-      <Navbar/>
+      { displayCart ? <Cart showCart={showCart} cartItems={cartItems}/> : null }
+      <Navbar showCart={showCart}/>
       <div>
         <div className='adBanner'>
           <div className='adBannerContent'>
@@ -32,7 +37,7 @@ function App() {
             <Route path="/collections/newArrivals" element={<NewArrivals/>}/>
             <Route path="/collections/:sex" element={<Collections/>}/>
             <Route path="/collections/:sex/:category" element={<Collections/>}/>
-            <Route path="/collections/:sex/:category/:id" element={<ProductDetail/>}/>
+            <Route path="/collections/:sex/:category/:id" element={<ProductDetail setCartItems={setCartItems}/>}/>
             <Route path="/about" element={<About/>}/>
             <Route path="*" element={<Homepage/>}/>
           </Routes>

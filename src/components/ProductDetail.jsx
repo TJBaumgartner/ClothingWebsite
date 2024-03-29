@@ -8,9 +8,9 @@ function ProductDetail() {
     
     
     const [quantity, setQuantity] = useState(1)
-    
     const [slideProducts, setSlideProducts] = useState()
     const [slide, setSlide] = useState(0)
+    const [size, setSize] = useState(3)
     const location = useLocation();
     const product = location.state.product
 
@@ -54,6 +54,26 @@ function ProductDetail() {
             setSlide(0)
         }
     }
+    const handleSizeChange = (value) => {
+        switch(value) {
+            case "XS":
+                setSize(value)
+            break;
+            case "S":
+                setSize(value)
+            break;
+            case "M":
+                setSize(value)
+            break;
+            case "L":
+                setSize(value)
+            break;
+            case "XL":
+                setSize(value)
+            break;  
+            }
+        setSize(value)
+    }
     return (
     <>
         <NavBanner/>
@@ -82,28 +102,28 @@ function ProductDetail() {
                     <h1>Select Size:</h1>
                     {product.category == 'shoes' ? 
                         <div className='sizeContainer'>
-                            <input name='size' type='radio' id='XS'></input>
+                            <input type='radio' id='XS' checked={size === 'XS'} onChange={() => handleSizeChange('XS')}></input>
                             <label htmlFor="XS">8</label>
-                            <input name='size' type='radio' id='S'></input>
+                            <input type='radio' id='S' checked={size === 'S'} onChange={() => handleSizeChange('S')}></input>
                             <label htmlFor="S">8.5</label>
-                            <input name='size' type='radio' id='M'></input>
+                            <input type='radio' id='M' checked={size === 'M'} onChange={() => handleSizeChange('M')}></input>
                             <label htmlFor="M">9</label>
-                            <input name='size' type='radio' id='L'></input>
+                            <input type='radio' id='L' checked={size === 'L'} onChange={() => handleSizeChange('L')}></input>
                             <label htmlFor="L">9.5</label>
-                            <input name='size' type='radio' id='XL'></input>
+                            <input type='radio' id='XL' checked={size === 'XL'} onChange={() => handleSizeChange('XL')}></input>
                             <label htmlFor="XL">10</label>
                         </div>
                     :
                         <div className='sizeContainer'>
-                            <input name='size' type='radio' id='XS'></input>
+                            <input type='radio' id='XS' checked={size === 'XS'} onChange={() => handleSizeChange('XS')}></input>
                             <label htmlFor="XS">XS</label>
-                            <input name='size' type='radio' id='S'></input>
+                            <input type='radio' id='S' checked={size === 'S'} onChange={() => handleSizeChange('S')}></input>
                             <label htmlFor="S">S</label>
-                            <input name='size' type='radio' id='M'></input>
+                            <input type='radio' id='M' checked={size === 'M'} onChange={() => handleSizeChange('M')}></input>
                             <label htmlFor="M">M</label>
-                            <input name='size' type='radio' id='L'></input>
+                            <input type='radio' id='L' checked={size === 'L'} onChange={() => handleSizeChange('L')}></input>
                             <label htmlFor="L">L</label>
-                            <input name='size' type='radio' id='XL'></input>
+                            <input type='radio' id='XL' checked={size === 'XL'} onChange={() => handleSizeChange('XL')}></input>
                             <label htmlFor="XL">XL</label>
                         </div>
                     }

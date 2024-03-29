@@ -35,8 +35,9 @@ function Footer() {
             <li>Affiliate</li>
           </ul>
         </div>
-        <div className='footerColumn icons'>
-          <ul>
+        <div className='footerColumn'>
+          <h1>Socials</h1>
+          <ul className='icons'>
             <li><i className="fa fa-facebook"></i></li>
             <li><i className="fa fa-twitter"></i></li>
             <li><i className="fa fa-instagram"></i></li>
