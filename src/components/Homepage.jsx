@@ -20,6 +20,7 @@ function Homepage() {
   const [tabString, setTabString] = useState('mens')
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const filteredProducts = Products.filter(product => {
       if((product.newArrival == true)){
         return true

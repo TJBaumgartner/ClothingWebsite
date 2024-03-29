@@ -4,6 +4,9 @@ import '../App.css'
 import { Products } from '../products'
 
 function Sale() {
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [])
     return (
     <main className='saleContainer'>
         <div className='saleBackground'>

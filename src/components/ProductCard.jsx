@@ -5,7 +5,6 @@ function ProductCard(props) {
     const product = props.product
     useEffect(() => {
         window.scrollTo(0, 0);
-
     }, [])
     return (
     <>

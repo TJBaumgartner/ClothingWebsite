@@ -7,6 +7,9 @@ import AboutImage3 from '../../public/images/AboutImage3.png'
 
 
 function About() {
+    // useEffect(() => {
+    //   window.scrollTo(0, 0);
+    // }, [])
     return (
     <main className='aboutContainer'>
         <div className='aboutBanner'>
@@ -14,7 +17,7 @@ function About() {
             <h1>Clothing For Everyone</h1>
             <p>We offer a vast and diverse set of clothing for all shapes, sizes, and events. Made with top of the line materials and passion we are positive you will find something that suits you.</p>
             <Link to={`/collections/newArrivals`}>
-              <button>Discover Styles</button>
+              <button className='aboutButton'>Discover Styles</button>
             </Link>
           </div>
         </div>
@@ -48,7 +51,10 @@ function About() {
           </div>
         </div>
         <div className='aboutBottom'>
-          Become a part of the community
+          <div>
+            <p>At Vanilla Cosmetics we are a family. We pride ourselves on the community that built us up and as such would like to give back in anyway we can. Join our community to keep up to date on our newest ventures and get exclusing deals when we release our products.</p>
+            <button className='aboutButton'>Become a member</button>
+          </div>
         </div>
     </main>
   )
