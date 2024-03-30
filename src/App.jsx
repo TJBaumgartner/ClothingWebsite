@@ -37,7 +37,7 @@ function App() {
             <Route path="/collections/newArrivals" element={<NewArrivals/>}/>
             <Route path="/collections/:sex" element={<Collections/>}/>
             <Route path="/collections/:sex/:category" element={<Collections/>}/>
-            <Route path="/collections/:sex/:category/:id" element={<ProductDetail setCartItems={setCartItems}/>}/>
+            <Route path="/collections/:sex/:category/:id" element={<ProductDetail setCartItems={setCartItems} setDisplayCart={setDisplayCart} cartItems={cartItems}/>}/>
             <Route path="/about" element={<About/>}/>
             <Route path="*" element={<Homepage/>}/>
           </Routes>

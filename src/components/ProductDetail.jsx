@@ -4,9 +4,11 @@ import '../App.css'
 import NavBanner from './NavBanner';
 import { Products } from '../products';
 
-function ProductDetail() {
+function ProductDetail(props) {
     
-    
+    const cartItems = props.cartItems
+    const setDisplayCart = props.setDisplayCart
+    const setCartItems = props.setCartItems
     const [quantity, setQuantity] = useState(1)
     const [slideProducts, setSlideProducts] = useState()
     const [slide, setSlide] = useState(0)
@@ -23,7 +25,6 @@ function ProductDetail() {
             return false
         }
         })
-        console.log(filteredProducts)
         setSlideProducts(filteredProducts)
         window.scrollTo(0, 0);
     }, [])
@@ -47,7 +48,6 @@ function ProductDetail() {
         }
     }
     const nextSlide = () => {
-        console.log(slideProducts.length - 4)
         if(slide < slideProducts.length - 6){
             setSlide(slide+1)
         } else {
@@ -73,6 +73,26 @@ function ProductDetail() {
             break;  
             }
         setSize(value)
+    }
+
+    const cartAdd = () => {
+        let price = 0
+        if(product.onSale == true){
+           price = (Math.ceil(product.price*0.7))
+        } else{
+            price = product.price
+        }
+        let newItem = {
+            name: product.name, 
+            size: size,
+            quantity: quantity,
+            image: product.image,
+            price: price
+        }
+        setCartItems([
+            ...cartItems, newItem
+        ])
+        setDisplayCart(true)
     }
     return (
     <>
@@ -136,7 +156,7 @@ function ProductDetail() {
                         </div>
                     </div>
                     <div className='addCartContainer'>
-                        <button className='addToCartButton'>Add To Cart</button>
+                        <button className='addToCartButton' onClick={() => cartAdd()}>Add To Cart</button>
                         <p>Free Shipping Over $99</p>
                     </div>
                     <div className='descriptionContainer'>

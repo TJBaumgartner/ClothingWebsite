@@ -9,12 +9,27 @@ function Cart(props) {
     // }, [])
     return (
         <main className='cart'>
-            <p onClick={() => showCart()}>X</p>
+            <div className='cartTop'>
+                <h2>My Cart</h2>
+                <p onClick={() => showCart()}>X</p>
+            </div>
+            <div className='cartItemsContainer'>
             {cartItems.length > 0 ?
                 cartItems.map((item) => (
-                    <div>
-                        <h1>{item.name}</h1>
-                        <p>{item.description}</p>
+                    <div className='cartItem'>
+                        <div className='cartImage'>
+                            <img src={item.image}></img>
+
+                        </div>
+                        <div className='cartContent'>
+                            <h1>{item.name}</h1>
+                            <p>${item.price}.00</p>
+                            <p>Size: {item.size}</p>
+                            <p>{item.quantity}</p>
+                        </div>
+                        <div className='cartRemove'>
+                            <p>Remove</p>
+                        </div>
                     </div>
                 ))
                 :
@@ -23,6 +38,10 @@ function Cart(props) {
                     <button>Shop new arrivals</button>
                 </div>
             }
+            </div>
+            <div className='cartBottom'>
+                <button>CHECKOUT</button>
+            </div>
         </main>
     )
 }
