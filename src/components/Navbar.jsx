@@ -7,6 +7,11 @@ import 'font-awesome/css/font-awesome.min.css';
 
 function Navbar(props) {
     const showCart = props.showCart;
+    const setCartOpen = props.setCartOpen
+    const openCart = () => {
+        setCartOpen(true)
+        showCart()
+    }
     return (
     <nav className='NavbarContainer'>
         <div className='Navbar'>
@@ -31,7 +36,7 @@ function Navbar(props) {
                 <Link to="/about">
                     <h2>About Us</h2>
                 </Link>
-                <i className="fa fa-shopping-cart" onClick={() => showCart()}></i>
+                <i className="fa fa-shopping-cart" onClick={() => openCart()}></i>
             </div>
         </div>
     </nav>

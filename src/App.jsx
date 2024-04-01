@@ -14,11 +14,12 @@ import Cart from './components/Cart';
 function App() {
   const [displayCart, setDisplayCart] = useState(false)
   const [cartItems, setCartItems] = useState([])
+  const [cartOpen, setCartOpen] = useState(false)
   const showCart = () => setDisplayCart(!displayCart)
   return (
     <div className='AppContainer'>
-      { displayCart ? <Cart showCart={showCart} cartItems={cartItems}/> : null }
-      <Navbar showCart={showCart}/>
+      { displayCart ? <Cart showCart={showCart} cartItems={cartItems} cartOpen={cartOpen} setCartOpen={setCartOpen}/> : null }
+      <Navbar showCart={showCart} setCartOpen={setCartOpen}/>
       <div>
         <div className='adBanner'>
           <div className='adBannerContent'>
