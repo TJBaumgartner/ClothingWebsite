@@ -892,9 +892,6 @@
   background-color: var(--accent-color);
   z-index: 4;
   right: 0;
-  overflow-y: auto;
-  scrollbar-width: thin;
-  scrollbar-color: var(--accent-color) #beac87;
   transform: translateX(100%);
 }
 
@@ -918,8 +915,12 @@
   font-size: 1.5rem;
 }
 .cartItemsContainer{
+  height: 100vh;
   padding-top: 8vh;
   padding-bottom: 20vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-color) #beac87;
 }
 .cartItem{
   width: 90%;
@@ -970,8 +971,6 @@
   border: none;
   font-size: 1rem;
   color: #2b2e2f;
-  /* border: 2px solid var(--main-color); */
-  /* background-color: white; */
   background-color: rgb(48, 48, 48);
   color: white;
   border-radius: 2px;

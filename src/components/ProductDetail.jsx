@@ -5,16 +5,17 @@ import NavBanner from './NavBanner';
 import { Products } from '../products';
 
 function ProductDetail(props) {
-    
+
+    const location = useLocation();
+    const product = location.state.product
     const cartItems = props.cartItems
-    const setDisplayCart = props.setDisplayCart
+    const showCart = props.showCart
     const setCartItems = props.setCartItems
+    const setCartOpen = props.setCartOpen
     const [quantity, setQuantity] = useState(1)
     const [slideProducts, setSlideProducts] = useState()
     const [slide, setSlide] = useState(0)
-    const [size, setSize] = useState(3)
-    const location = useLocation();
-    const product = location.state.product
+    const [size, setSize] = useState((product.category == 'shoes') ? '9' : 'M')
 
 
     useEffect(() => {
@@ -55,6 +56,25 @@ function ProductDetail(props) {
         }
     }
     const handleSizeChange = (value) => {
+        if(product.category == 'shoes'){
+        switch(value) {
+            case "8":
+                setSize(value)
+            break;
+            case "8.5":
+                setSize(value)
+            break;
+            case "9":
+                setSize(value)
+            break;
+            case "9.5":
+                setSize(value)
+            break;
+            case "10":
+                setSize(value)
+            break;  
+            }
+        }
         switch(value) {
             case "XS":
                 setSize(value)
@@ -76,6 +96,10 @@ function ProductDetail(props) {
     }
 
     const cartAdd = () => {
+        if(cartItems.some(item => item.name === product.name && item.size === size ? item.quantity = item.quantity + quantity : null)){
+            setCartOpen(true)
+            return showCart()
+        }
         let price = 0
         if(product.onSale == true){
            price = (Math.ceil(product.price*0.7))
@@ -89,10 +113,17 @@ function ProductDetail(props) {
             image: product.image,
             price: price
         }
-        setCartItems([
-            ...cartItems, newItem
-        ])
-        setDisplayCart(true)
+        if(cartItems.length > 0){
+            setCartItems([
+                ...cartItems, newItem
+            ])
+        } else{
+            setCartItems([
+                newItem
+            ])
+        }
+        setCartOpen(true)
+        showCart()
     }
     return (
     <>
@@ -122,15 +153,15 @@ function ProductDetail(props) {
                     <h1>Select Size:</h1>
                     {product.category == 'shoes' ? 
                         <div className='sizeContainer'>
-                            <input type='radio' id='XS' checked={size === 'XS'} onChange={() => handleSizeChange('XS')}></input>
+                            <input type='radio' id='XS' checked={size === '8'} onChange={() => handleSizeChange('8')}></input>
                             <label htmlFor="XS">8</label>
-                            <input type='radio' id='S' checked={size === 'S'} onChange={() => handleSizeChange('S')}></input>
+                            <input type='radio' id='S' checked={size === '8.5'} onChange={() => handleSizeChange('8.5')}></input>
                             <label htmlFor="S">8.5</label>
-                            <input type='radio' id='M' checked={size === 'M'} onChange={() => handleSizeChange('M')}></input>
+                            <input type='radio' id='M' checked={size === '9'} onChange={() => handleSizeChange('9')}></input>
                             <label htmlFor="M">9</label>
-                            <input type='radio' id='L' checked={size === 'L'} onChange={() => handleSizeChange('L')}></input>
+                            <input type='radio' id='L' checked={size === '9.5'} onChange={() => handleSizeChange('9.5')}></input>
                             <label htmlFor="L">9.5</label>
-                            <input type='radio' id='XL' checked={size === 'XL'} onChange={() => handleSizeChange('XL')}></input>
+                            <input type='radio' id='XL' checked={size === '10'} onChange={() => handleSizeChange('10')}></input>
                             <label htmlFor="XL">10</label>
                         </div>
                     :

@@ -18,7 +18,7 @@ function App() {
   const showCart = () => setDisplayCart(!displayCart)
   return (
     <div className='AppContainer'>
-      { displayCart ? <Cart showCart={showCart} cartItems={cartItems} cartOpen={cartOpen} setCartOpen={setCartOpen}/> : null }
+      { displayCart ? <Cart showCart={showCart} cartItems={cartItems} cartOpen={cartOpen} setCartOpen={setCartOpen} setCartItems={setCartItems}/> : null }
       <Navbar showCart={showCart} setCartOpen={setCartOpen}/>
       <div>
         <div className='adBanner'>
@@ -38,7 +38,7 @@ function App() {
             <Route path="/collections/newArrivals" element={<NewArrivals/>}/>
             <Route path="/collections/:sex" element={<Collections/>}/>
             <Route path="/collections/:sex/:category" element={<Collections/>}/>
-            <Route path="/collections/:sex/:category/:id" element={<ProductDetail setCartItems={setCartItems} setDisplayCart={setDisplayCart} cartItems={cartItems}/>}/>
+            <Route path="/collections/:sex/:category/:id" element={<ProductDetail setCartItems={setCartItems} showCart={showCart} cartItems={cartItems} setCartOpen={setCartOpen}/>}/>
             <Route path="/about" element={<About/>}/>
             <Route path="*" element={<Homepage/>}/>
           </Routes>

@@ -7,13 +7,24 @@ function Cart(props) {
     const cartItems = props.cartItems
     const cartOpen = props.cartOpen;
     const setCartOpen = props.setCartOpen
-    // useEffect(() => {
-    // }, [])
+    const setCartItems = props.setCartItems
+    const [items, setItems] = useState(cartItems)
+    useEffect(() => {
+        setItems(cartItems)
+    }, [cartItems])
     const toggleCart = () => {
         setCartOpen(false)
         setTimeout(() => {
             showCart()
         }, 500)
+    }
+    const removeFromCart = (index) => {
+        let cloneArray = [...items]
+        let filteredArray = cloneArray.filter((item, idx) => idx !== index)
+        console.log(filteredArray)
+        setCartItems(
+            filteredArray
+        )
     }
     return (
         <>
@@ -23,12 +34,11 @@ function Cart(props) {
                     <p onClick={() => toggleCart()}>X</p>
                 </div>
                 <div className='cartItemsContainer'>
-                {cartItems.length > 0 ?
-                    cartItems.map((item) => (
-                        <div className='cartItem'>
+                {items.length > 0 ?
+                    items.map((item, index) => (
+                        <div className='cartItem' key={index}>
                             <div className='cartImage'>
                                 <img src={item.image}></img>
-
                             </div>
                             <div className='cartContent'>
                                 <h1>{item.name}</h1>
@@ -37,7 +47,7 @@ function Cart(props) {
                                 <p>{item.quantity}</p>
                             </div>
                             <div className='cartRemove'>
-                                <p>Remove</p>
+                                <p onClick={() => removeFromCart(index)}>Remove</p>
                             </div>
                         </div>
                     ))
@@ -45,7 +55,7 @@ function Cart(props) {
                     <div className='emptyCart'>
                         <h1>Looks like your carts empty</h1>
                         <Link to="/collections/newArrivals">
-                            <button onClick={showCart}>Shop new arrivals</button>
+                            <button onClick={() => toggleCart()}>Shop new arrivals</button>
                         </Link>
                     </div>
                 }
@@ -56,7 +66,7 @@ function Cart(props) {
             </main>
             <div className='cartBackground' onClick={showCart}>
             </div>
-            </>
+        </>
     )
 }
 
