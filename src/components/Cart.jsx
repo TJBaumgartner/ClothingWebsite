@@ -8,9 +8,14 @@ function Cart(props) {
     const cartOpen = props.cartOpen;
     const setCartOpen = props.setCartOpen
     const setCartItems = props.setCartItems
-    const [items, setItems] = useState(cartItems)
+    const [cartTotal, setCartTotal] = useState(0)
+
     useEffect(() => {
-        setItems(cartItems)
+        let sum = 0
+        for(let i = 0; i < cartItems.length; i++){
+            sum = sum + cartItems[i].price * cartItems[i].quantity
+        }
+        setCartTotal(sum)
     }, [cartItems])
     const toggleCart = () => {
         setCartOpen(false)
@@ -19,7 +24,7 @@ function Cart(props) {
         }, 500)
     }
     const removeFromCart = (index) => {
-        let cloneArray = [...items]
+        let cloneArray = [...cartItems]
         let filteredArray = cloneArray.filter((item, idx) => idx !== index)
         console.log(filteredArray)
         setCartItems(
@@ -34,8 +39,8 @@ function Cart(props) {
                     <p onClick={() => toggleCart()}>X</p>
                 </div>
                 <div className='cartItemsContainer'>
-                {items.length > 0 ?
-                    items.map((item, index) => (
+                {cartItems.length > 0 ?
+                    cartItems.map((item, index) => (
                         <div className='cartItem' key={index}>
                             <div className='cartImage'>
                                 <img src={item.image}></img>
@@ -61,7 +66,7 @@ function Cart(props) {
                 }
                 </div>
                 <div className='cartBottom'>
-                    <button>CHECKOUT</button>
+                    <button>CHECKOUT - ${cartTotal}</button>
                 </div>
             </main>
             <div className='cartBackground' onClick={showCart}>
