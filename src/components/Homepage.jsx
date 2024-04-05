@@ -30,7 +30,10 @@ function Homepage() {
     })
     setProducts(filteredProducts)
   }, [])
-
+  useEffect(() => {
+    window.addEventListener("resize", updateMedia);
+    return () => window.removeEventListener("resize", updateMedia);
+  });
   const changeBrowseTab = () => {
     setMenTab(!menTab)
     if(tabString == 'mens'){
@@ -38,9 +41,15 @@ function Homepage() {
     } else {
       setTabString('mens')
     }
-    console.log(menTab)
   }
   const previousSlide = () => {
+    if(!isDesktop){
+      if(slide == 0) {
+        return setSlide(products.length - 1)
+      } else {
+        return setSlide(slide - 1)
+      }
+    }
     if(slide > 4){
       setSlide(slide - 5)
     } else if(slide == 0) {
@@ -50,7 +59,13 @@ function Homepage() {
     }
   }
   const nextSlide = () => {
-    console.log(slide)
+    if(!isDesktop){
+      if(slide == products.length - 1) {
+        return setSlide(0)
+      } else {
+        return setSlide(slide + 1)
+      }
+    }
     if(slide < 5){
       setSlide(slide + 5)
     } else if(slide == 5){
@@ -59,6 +74,11 @@ function Homepage() {
       setSlide(0)
     }
   }
+  const [isDesktop, setDesktop] = useState(window.innerWidth > 1024);
+
+  const updateMedia = () => {
+    setDesktop(window.innerWidth > 1024);
+  };
     return (
     <main className='HomepageContainer'>
         <section>
@@ -79,12 +99,31 @@ function Homepage() {
         </section>
         <section className='newReleases'>
           <h1>New Releases</h1>
+          {isDesktop ? (
+          <div className='slideshowContainer'>
+          <button onClick={() => previousSlide()} className='decreaseSlide'>&lt;</button>
+          <div className='slideShow'>
+              {products &&
+                products.map((product, idx) => (
+                  <div className={(slide <= idx && idx <= slide +6) ? "slide" : "slideHidden"} key={idx}>
+                    <Link to={`/collections/${product.gender}/${product.category}/${product.id}`} state={{product}}>
+                      <img src={product.image}></img>
+                    </Link>
+                    {/* <img src={product.image}/> */}
+                    <h1>{product.name}</h1>
+                  </div>
+                ))
+              }
+          </div>
+          <button onClick={() => nextSlide()} className='increaseSlide'>&gt;</button>
+         </div>
+          ) : (
           <div className='slideshowContainer'>
             <button onClick={() => previousSlide()} className='decreaseSlide'>&lt;</button>
             <div className='slideShow'>
                 {products &&
                   products.map((product, idx) => (
-                    <div className={(slide < idx && idx < slide +6) ? "slide" : "slideHidden"} key={idx}>
+                    <div className={(slide == idx) ? "slide" : "slideHidden"} key={idx}>
                       <Link to={`/collections/${product.gender}/${product.category}/${product.id}`} state={{product}}>
                         <img src={product.image}></img>
                       </Link>
@@ -95,7 +134,8 @@ function Homepage() {
                 }
             </div>
             <button onClick={() => nextSlide()} className='increaseSlide'>&gt;</button>
-          </div>
+          </div>          
+          )}
         </section>
         <section className='browserContainer'>
           <h1>What We're Wearing</h1>

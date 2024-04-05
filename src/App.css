@@ -152,7 +152,7 @@
 }
 .buttonContainer a{
   padding: 15px;
-  width: 35%;
+  width: 40%;
   border: none;
   font-size: 1.1rem;
   color: #2b2e2f;
@@ -190,7 +190,8 @@
 }
 .slideShow{
   position: absolute;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   justify-content: space-between;
   width: 100%;
 }
@@ -1072,9 +1073,42 @@
     width: 95%;
     padding: 1vh 0 1vh 0;
   }
+  .HomepageContainer{
+    width: 100%;
+  }
+  .bannerContent{
+    width: 90%;
+  }
+  .buttonContainer{
+    width: 100%;
+    justify-content: center;
+  }
   .mobileNav{
     display: flex;
   }
+  .slideShow{
+    grid-template-columns: 1fr;
+  }
+  .slide{
+    width: 100%;
+  }
+  .browserImages{
+    width: 100vw;
+    overflow-x: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .imagePlaceholder{
+    width: 50vw;
+  }
+  .browserTabs{
+    margin-top: 2vh;
+    justify-content: center;
+  }
+  .browserTabs h2{
+    font-size: 1.6rem;
+  }
+
 
 
 }
