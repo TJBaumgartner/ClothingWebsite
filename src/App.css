@@ -314,7 +314,7 @@
   grid-template-columns: 1fr 1fr;
   margin-top: 5vh;
   margin-bottom: 7vh;
-  height: 120vh;
+  height: 100%;
 }
 .occassionContainer h1{
   text-align: center;
@@ -1108,9 +1108,62 @@
   .browserTabs h2{
     font-size: 1.6rem;
   }
-
-
-
+  .occassionDiv{
+    display: flex;
+    flex-direction: column;
+  }
+  .occassionContent{
+    width: 90%;
+    margin-bottom: 10vh;
+  }
+  .occassionContent p{
+    padding-top: 2rem;
+  }
+  .occassionContainer h1{
+    text-align: center;
+    margin-bottom: 0;
+  }
+  .occassionContainer{
+    margin-bottom: 0;
+  }
+  .occassionContent a{
+    align-self: center;
+  }
+  .occassionImageMen{
+    height: 50vh;
+    width: 100%;
+  }
+  .occassionImageWoman{
+    height: 50vh;
+    width: 100%;
+  }
+  .homeAboutContainer{
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .homeAboutContainer h1{
+    text-align: center;
+  }
+  .homeAboutContainer p{
+    width: 90%;
+    padding-bottom: 2rem;
+  }
+  .footerContainer{
+    height: 100%;
+  }
+  .footerBottom p{
+    padding-top: .5rem;
+    line-height: 2rem;
+  }
+  .footerContent{
+    flex-direction: column;
+  }
+  .footerColumn h1{
+    padding-top: 2rem;
+  }
+  .icons{
+    margin: auto;
+  }
 }
 /* For Tablet: */
 @media only screen and (max-width: 768px) {
