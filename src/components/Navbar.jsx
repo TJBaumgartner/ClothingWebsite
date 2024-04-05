@@ -16,7 +16,7 @@ function Navbar(props) {
     return (
     <nav className='NavbarContainer'>
         <div className='mobileNav'>
-            <button onClick={() => setDisplayDropdown(!displayDropDown)}>DropDown</button>
+            <i className="fa fa-bars" onClick={() => setDisplayDropdown(!displayDropDown)}></i>
             <div  className={displayDropDown ? 'dropdownContent dropdown-in' : 'dropdownContent dropdown-out'}>
                 <p onClick={() => setDisplayDropdown(!displayDropDown)}>X</p>
                 <Link to="collections/mens">
@@ -35,6 +35,9 @@ function Navbar(props) {
                     <h2 onClick={() => setDisplayDropdown(!displayDropDown)}>About Us</h2>
                 </Link>
             </div>
+                <Link to="/">
+                    <img src={Logo} className='Logo'></img>
+                </Link>
                 <i className="fa fa-shopping-cart" onClick={() => openCart()}></i>
         </div>
         <div className='Navbar'>

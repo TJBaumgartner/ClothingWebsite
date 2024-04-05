@@ -24,12 +24,14 @@ function App() {
         <div className='adBanner'>
           <div className='adBannerContent'>
             <h1>New Arrivals Every Monday | Get Free Shipping On Orders Over $99</h1>
-            <Link to="collections/mens">
-                <h2>SHOP MEN'S</h2>
-            </Link>
-            <Link to="collections/womens">
-                <h2>SHOP WOMEN'S</h2>
-            </Link>
+            <div className='adLinks'>
+              <Link to="collections/mens">
+                  <h2>SHOP MEN'S</h2>
+              </Link>
+              <Link to="collections/womens">
+                  <h2>SHOP WOMEN'S</h2>
+              </Link>
+            </div>
           </div>
         </div>
           <Routes>

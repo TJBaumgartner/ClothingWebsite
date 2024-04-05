@@ -20,6 +20,7 @@
   padding-top: 1vh;
   background-color: white;
   min-height: 100vh;
+
 }
 
 /* Navbar Styling */
@@ -112,6 +113,10 @@
   font-size: .75rem;
   margin-left: 30px;
   text-decoration: underline;
+}
+.adLinks{
+  display: flex;
+  margin: auto;
 }
 .adBannerContent a:hover{
   color: gray;
@@ -1017,7 +1022,7 @@
 .dropdownContent{
   position: fixed;
   height: 100%;
-  width: 80%;
+  width: 100vw;
   background-color: var(--main-color);
   z-index: 4;
   left: 0;
@@ -1049,13 +1054,23 @@
   color: var(--main-color);
   transition: ease-in-out .2s;
 }
-.mobileNav button{
-  margin: 5vh;
+.mobileNav .fa-bars{
+  margin-top: 2.5vh;
+  font-size: 1.7rem;
 }
 /* For Laptop: */
 @media only screen and (max-width: 1024px) {
   .Navbar{
     display: none;
+  }
+  .adBanner{
+    text-align: center;
+  }
+  .adBannerContent{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    padding: 1vh 0 1vh 0;
   }
   .mobileNav{
     display: flex;
