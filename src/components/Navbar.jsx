@@ -13,6 +13,9 @@ function Navbar(props) {
         showCart()
     }
     const [displayDropDown, setDisplayDropdown] = useState(false)
+    const [displaySaleTab, setDisplaySaleTab] = useState(false)
+    const [displayArrivalTab, setDisplayArrivalTab] = useState(false)
+
     return (
     <nav className='NavbarContainer'>
         <div className='mobileNav'>
@@ -25,12 +28,28 @@ function Navbar(props) {
                 <Link to="/collections/womens">
                     <h2 onClick={() => setDisplayDropdown(!displayDropDown)}>Womens</h2>
                 </Link>
-                <Link to="/collections/newArrivals">
-                    <h2 onClick={() => setDisplayDropdown(!displayDropDown)}>New Arrivals</h2>
-                </Link>
-                <Link to="collections/sale">
-                    <h2 className='saleTab' onClick={() => setDisplayDropdown(!displayDropDown)}>Sale</h2>
-                </Link>
+                <div className='saleTab'>
+                    <h2 onClick={() => setDisplayArrivalTab(!displayArrivalTab)}>New Arrivals <i className={`fa ${displayArrivalTab ?  'fa-caret-up' : 'fa-caret-down'}`}></i></h2>
+                </div>
+                <div className={displayArrivalTab ? 'saleDropdownShow' : 'saleDropdownHide'}>
+                    <ul>
+                        <Link to="/collections/mens/arrivals">
+                            <h2 onClick={() => setDisplayDropdown(!displayDropDown)}>Mens</h2>
+                        </Link>
+                        <Link to="/collections/womens/arrivals">
+                            <h2 onClick={() => setDisplayDropdown(!displayDropDown)}>Womens</h2>
+                        </Link>
+                    </ul>
+                </div>
+                <div className='saleTab'>
+                    <h2 onClick={() => setDisplaySaleTab(!displaySaleTab)}>Sale <i className={`fa ${displaySaleTab ?  'fa-caret-up' : 'fa-caret-down'}`}></i></h2>
+                </div>
+                <div className={displaySaleTab ? 'saleDropdownShow' : 'saleDropdownHide'}>
+                    <ul>
+                        <h2>Mens</h2>
+                        <h2>Womens</h2>
+                    </ul>
+                </div>
                 <Link to="/about">
                     <h2 onClick={() => setDisplayDropdown(!displayDropDown)}>About Us</h2>
                 </Link>

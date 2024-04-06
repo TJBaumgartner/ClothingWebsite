@@ -116,7 +116,6 @@
 }
 .adLinks{
   display: flex;
-  margin: auto;
 }
 .adBannerContent a:hover{
   color: gray;
@@ -1059,8 +1058,26 @@
   margin-top: 2.5vh;
   font-size: 1.7rem;
 }
+.saleDropdownShow h2{
+  font-size: 1.2rem;
+  padding-left: 12vw;
+  background-color: #47837b;
+}
+.saleDropdownHide{
+  display: none;
+}
+.saleTab h2{
+  display: flex;
+  justify-content: space-between;
+  padding-right: 10vw;
+}
 /* For Laptop: */
 @media only screen and (max-width: 1024px) {
+  /* Navbar stylings */
+  /* Navbar stylings */
+  /* Navbar stylings */
+  /* Navbar stylings */
+
   .Navbar{
     display: none;
   }
@@ -1073,6 +1090,12 @@
     width: 95%;
     padding: 1vh 0 1vh 0;
   }
+
+  /* Homepage Stylings*/
+  /* Homepage Stylings*/
+  /* Homepage Stylings*/
+  /* Homepage Stylings*/
+
   .HomepageContainer{
     width: 100%;
   }
@@ -1148,6 +1171,16 @@
     width: 90%;
     padding-bottom: 2rem;
   }
+  .adLinks{
+    margin: auto;
+  }
+
+  /* Footer stylings*/
+  /* Footer stylings*/
+  /* Footer stylings*/
+  /* Footer stylings*/
+  /* Footer stylings*/  
+
   .footerContainer{
     height: 100%;
   }
