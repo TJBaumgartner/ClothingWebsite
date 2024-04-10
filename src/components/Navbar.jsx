@@ -46,8 +46,12 @@ function Navbar(props) {
                 </div>
                 <div className={displaySaleTab ? 'saleDropdownShow' : 'saleDropdownHide'}>
                     <ul>
-                        <h2>Mens</h2>
-                        <h2>Womens</h2>
+                    <Link to="/collections/mens/sale">
+                            <h2 onClick={() => setDisplayDropdown(!displayDropDown)}>Mens</h2>
+                        </Link>
+                        <Link to="/collections/womens/sale">
+                            <h2 onClick={() => setDisplayDropdown(!displayDropDown)}>Womens</h2>
+                        </Link>
                     </ul>
                 </div>
                 <Link to="/about">

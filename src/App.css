@@ -1203,10 +1203,51 @@
   .aboutBannerContent{
     width: 100%;
   }
+  .sideNav{
+    margin-left: 0;
+  }
+  .cart{
+    width: 50vw;
+  }
+  .cartTop{
+    width: 50vw;
+    padding-right: 2vw;
+  }
+  .cartItemsContainer{
+    width: 50vw;
+  }
+  .cartBottom{
+    width: 50vw;
+  }
 }
 /* For Tablet: */
 @media only screen and (max-width: 768px) {
-  
+  .mobileFilter{
+    display: flex;
+  }
+  .sideNav{
+    display: none;
+  }
+  .filterContainer{
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+  }
+  .filterContainer select{
+    width: 40%;
+  }
+  .collectionsContainer{
+    width: 100%;
+    display: flex;
+  }
+  .collectionsContent{
+    width: 95%;
+    margin: auto;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .collectionsContent img{
+    height: 30vh;
+  }
 }
 /* For Mobile: */
 @media only screen and (max-width: 767px) {
@@ -1238,30 +1279,17 @@
   .aboutBottom{
     padding-bottom: 60vh;
   }
-  .mobileFilter{
-    display: flex;
+  .cart{
+    width: 100vw;
   }
-  .sideNav{
-    display: none;
+  .cartTop{
+    width: 100vw;
+    padding-right: 2vw;
   }
-  .filterContainer{
-    width: 100%;
-    height: 100%;
-    justify-content: space-around;
+  .cartItemsContainer{
+    width: 100vw;
   }
-  .filterContainer select{
-    width: 40%;
-  }
-  .collectionsContainer{
-    width: 100%;
-    display: flex;
-  }
-  .collectionsContent{
-    width: 95%;
-    margin: auto;
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .collectionsContent img{
-    height: 30vh;
+  .cartBottom{
+    width: 100vw;
   }
 }
