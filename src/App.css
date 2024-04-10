@@ -1197,12 +1197,42 @@
   .icons{
     margin: auto;
   }
+  .aboutBannerContent{
+    width: 100%;
+  }
 }
 /* For Tablet: */
 @media only screen and (max-width: 768px) {
   
 }
 /* For Mobile: */
-@media only screen and (max-width: 320px) {
-
+@media only screen and (max-width: 767px) {
+  .aboutContentContainer{
+    width: 100%;
+  }
+  .aboutContent{
+    display: flex;
+    flex-direction: column;
+  }
+  .aboutText{
+    position: static;
+    width: 100%;
+    padding: 3vh 0 3vh 0
+  }
+  .aboutImage{
+    width: 100%;
+  }
+  .aboutText div{
+    position: static;
+    transform: translate(0%, 0%);
+    width: 80%;
+    margin: auto;
+    text-align: left;
+  }
+  .aboutBottom div{
+    width: 100%;
+  }
+  .aboutBottom{
+    padding-bottom: 60vh;
+  }
 }
