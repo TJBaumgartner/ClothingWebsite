@@ -4,8 +4,8 @@ import '../App.css'
 
 function NavBanner(props) {
     const sex = useParams().sex
-    const category = useParams().category
     const setCategory = props.setCategory
+    const category = props.category
     return (
     <nav className='navBanner'>
         <div>

@@ -20,7 +20,7 @@ function Collections() {
   },[])
   return (
   <>
-    <NavBanner setCategory={setCategory}/>
+    <NavBanner setCategory={setCategory} category={category}/>
       <div className='filterContainer'>
         <select onChange={() => setFilter(!filter)}>
           <option>Sort</option>
@@ -28,7 +28,7 @@ function Collections() {
           <option value={"Price : Low to High"}>Price : Low to High</option>
         </select>
         <select onChange={(e) => setCategory(e.target.value)} className='mobileFilter'>
-          <option>Category</option>
+          <option value={category}>Category</option>
           <option value="arrivals">New Arrivals</option>
           <option value="sweaters">Sweaters</option>
           <option value="shirts">Shirts</option>
