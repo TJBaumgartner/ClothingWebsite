@@ -9,37 +9,36 @@ import NavBanner from './NavBanner'
 function Collections() {
 
   const [products, setProducts] = useState()
-  const [sortDown, setSortDown] = useState(true)
   const [filter, setFilter] = useState(true)
+  const [mobileFilter, setMobileFilter] = useState(true)
 
   const sex = useParams().sex
-  const category = useParams().category
-
-  const changeSort = () => {
-    setSortDown(!sortDown)
-  }
-
+  // const category = useParams().category
+  const [category, setCategory] = useState(useParams().category)
   useEffect(() => {
     setProducts(Products)
-  }, [])
+  },[])
   return (
   <>
-    <NavBanner/>
+    <NavBanner setCategory={setCategory}/>
       <div className='filterContainer'>
-        {filter == true ? 
-          <select value={filter} onChange={() => setFilter(!filter)}>
-            <option value={"Price : High to Low"}>Price : High to Low</option>
-            <option value={"Price : Low to High"}>Price : Low to High</option>
-          </select>
-        :
-          <select value={filter} onChange={() => setFilter(!filter)}>
-            <option value={"Price : Low to High"}>Price : Low to High</option>
-            <option value={"Price : High to Low"}>Price : High to Low</option>
-          </select>
-        }
+        <select onChange={() => setFilter(!filter)}>
+          <option>Sort</option>
+          <option value={"Price : High to Low"}>Price : High to Low</option>
+          <option value={"Price : Low to High"}>Price : Low to High</option>
+        </select>
+        <select onChange={(e) => setCategory(e.target.value)} className='mobileFilter'>
+          <option>Category</option>
+          <option value="arrivals">New Arrivals</option>
+          <option value="sweaters">Sweaters</option>
+          <option value="shirts">Shirts</option>
+          <option value="bottoms">Bottoms</option>
+          <option value="shoes">Shoes</option>
+          <option value="sale">Sale</option>
+        </select>
       </div>
     <main className='collectionsContainer'>
-      <Sidenav sex={sex}/>
+      <Sidenav sex={sex} setCategory={setCategory}/>
         {filter == true ?
         <div className='collectionsContent'>
           {category == null && products &&
