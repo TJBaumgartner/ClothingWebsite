@@ -1298,4 +1298,34 @@
   .dropdownContent{
     width: 100vw;
   }
+  .detailContainer{
+    display: flex;
+    flex-direction: column;
+  }
+  .detailImageContainer{
+    height: 50vh;
+    border-bottom: 2px solid var(--main-color);
+  }
+  .detailContent{
+    border-left: none;
+    margin-top: 2vh;
+  }
+  .clearanceContainer{
+    display: flex;
+  }
+  .clearanceContainer h2{
+    font-size: 1.3rem;
+  }
+  .clearanceColor{
+    padding-left: 1rem;
+  }
+  .detailTop{
+    padding-bottom: 3vh;
+  }
+  .quantityContainer{
+    text-align: center;
+  }
+  .quantityContainer h2{
+    padding-bottom: 2vh;
+  }
 }

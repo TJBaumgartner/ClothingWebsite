@@ -16,8 +16,15 @@ function ProductDetail(props) {
     const [slideProducts, setSlideProducts] = useState()
     const [slide, setSlide] = useState(0)
     const [size, setSize] = useState((product.category == 'shoes') ? '9' : 'M')
+    const [isDesktop, setDesktop] = useState(window.innerWidth > 1024);
 
-
+    const updateMedia = () => {
+      setDesktop(window.innerWidth > 1024);
+    };
+    useEffect(() => {
+        window.addEventListener("resize", updateMedia);
+        return () => window.removeEventListener("resize", updateMedia);
+      });
     useEffect(() => {
         const filteredProducts = Products.filter(similarProduct => {
         if((similarProduct.trending == true && similarProduct.gender == product.gender && similarProduct.name !== product.name)){
@@ -42,6 +49,13 @@ function ProductDetail(props) {
     }
 
     const previousSlide = () => {
+        if(!isDesktop){
+            if(slide == 0) {
+              return setSlide(slideProducts.length - 2)
+            } else {
+              return setSlide(slide - 1)
+            }
+        }
         if(slide > 0){
             setSlide(slide-1)
         } else {
@@ -49,6 +63,13 @@ function ProductDetail(props) {
         }
     }
     const nextSlide = () => {
+        if(!isDesktop){
+            if(slide == slideProducts.length - 2) {
+              return setSlide(0)
+            } else {
+              return setSlide(slide + 1)
+            }
+        }
         if(slide < slideProducts.length - 6){
             setSlide(slide+1)
         } else {
