@@ -1006,6 +1006,26 @@
   width: 100%;
   z-index: 3;
 }
+.cartQuantity{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background-color: #b8a889;
+  line-height: 5vh;
+  padding: .3rem 1rem .3rem 1rem;
+  margin-top: 1rem;
+  color: black;
+  border-radius: 10px;
+  font-size: 1.4rem;
+}
+.cartQuantity button{
+  font-size: 1.4rem;
+  border: none;
+  background-color: #b8a889;
+}
+.cartQuantity button:hover{
+  color: var(--main-color);
+}
 @keyframes dropdown-in {
   100% { transform: translateX(0%); }
 }

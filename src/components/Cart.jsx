@@ -9,14 +9,14 @@ function Cart(props) {
     const setCartOpen = props.setCartOpen
     const setCartItems = props.setCartItems
     const [cartTotal, setCartTotal] = useState(0)
-
+    const [quantityChange, setQuantityChange] = useState(false)
     useEffect(() => {
         let sum = 0
         for(let i = 0; i < cartItems.length; i++){
             sum = sum + cartItems[i].price * cartItems[i].quantity
         }
         setCartTotal(sum)
-    }, [cartItems])
+    }, [cartItems, quantityChange])
     const toggleCart = () => {
         setCartOpen(false)
         setTimeout(() => {
@@ -30,6 +30,22 @@ function Cart(props) {
         setCartItems(
             filteredArray
         )
+    }
+    const increaseQuantity = (item) => {
+        if(item.quantity < 5){
+            item.quantity = item.quantity+1
+            setQuantityChange(!quantityChange)
+        } else {
+            return
+        }
+    }
+    const decreaseQuantity = (item) => {
+        if(item.quantity > 1){
+            item.quantity = item.quantity-1
+            setQuantityChange(!quantityChange)
+        } else {
+            return
+        }
     }
     return (
         <>
@@ -49,7 +65,11 @@ function Cart(props) {
                                 <h1>{item.name}</h1>
                                 <p>${item.price}.00</p>
                                 <p>Size: {item.size}</p>
-                                <p>{item.quantity}</p>
+                                <div className='cartQuantity'>
+                                    <button onClick={() => decreaseQuantity(item)}>-</button>
+                                    <p>{item.quantity}</p>
+                                    <button onClick={() => increaseQuantity(item)}>+</button>
+                                </div>
                             </div>
                             <div className='cartRemove'>
                                 <p onClick={() => removeFromCart(index)}>Remove</p>
@@ -58,10 +78,21 @@ function Cart(props) {
                     ))
                     :
                     <div className='emptyCart'>
-                        <h1>Looks like your carts empty</h1>
+                    <h1>Looks like your carts empty</h1>
+                    {window.innerWidth > 1024 ?    
                         <Link to="/collections/newArrivals">
                             <button onClick={() => toggleCart()}>Shop new arrivals</button>
                         </Link>
+                    :
+                        <div className='emptyCartMobile'>
+                            <Link to="/collections/mens/arrivals">
+                                <button onClick={() => toggleCart()}>Shop new arrivals Womens</button>
+                            </Link>
+                            <Link to="/collections/womens/arrivals">
+                                <button onClick={() => toggleCart()}>Shop new arrivals Womens</button>
+                            </Link>                        
+                        </div>
+                    }
                     </div>
                 }
                 </div>
