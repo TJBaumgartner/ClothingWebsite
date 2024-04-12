@@ -1,8 +1,7 @@
 
 # Clothing Website Frontend
-# Work in Progress
-Project of a clothing website frontend made using react as a framework.
+Project of a clothing website frontend made using react as a framework with full responsiveness for all device sizes.
 
 ## Demo
 
-https://clothing-website-65aghlwj0-tjbaumgartners-projects.vercel.app/
+clothing-website-sigma.vercel.app
