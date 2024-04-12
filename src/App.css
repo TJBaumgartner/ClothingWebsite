@@ -1037,7 +1037,7 @@
 .mobileNav p{
   font-weight: 900;
   text-align: right;
-  width: 100vw;
+  width: 100%;
   padding-right: 5vw;
   padding-top: 2vh;
   color: var(--accent-color);
@@ -1219,6 +1219,9 @@
   .cartBottom{
     width: 50vw;
   }
+  .dropdownContent{
+    width: 50%;
+  }
 }
 /* For Tablet: */
 @media only screen and (max-width: 768px) {
@@ -1237,7 +1240,7 @@
     width: 40%;
   }
   .collectionsContainer{
-    width: 100%;
+    width: 95%;
     display: flex;
   }
   .collectionsContent{
@@ -1280,7 +1283,7 @@
     padding-bottom: 60vh;
   }
   .cart{
-    width: 100vw;
+    width: 100%;
   }
   .cartTop{
     width: 100vw;
@@ -1290,6 +1293,9 @@
     width: 100vw;
   }
   .cartBottom{
+    width: 100vw;
+  }
+  .dropdownContent{
     width: 100vw;
   }
 }

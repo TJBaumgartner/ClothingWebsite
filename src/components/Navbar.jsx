@@ -16,17 +16,22 @@ function Navbar(props) {
     const [displaySaleTab, setDisplaySaleTab] = useState(false)
     const [displayArrivalTab, setDisplayArrivalTab] = useState(false)
 
+    const closeMobile = () => {
+        setDisplayDropdown(false)
+        setDisplayArrivalTab(false)
+        setDisplaySaleTab(false)
+    }
     return (
     <nav className='NavbarContainer'>
         <div className='mobileNav'>
             <i className="fa fa-bars" onClick={() => setDisplayDropdown(!displayDropDown)}></i>
             <div  className={displayDropDown ? 'dropdownContent dropdown-in' : 'dropdownContent dropdown-out'}>
-                <p onClick={() => setDisplayDropdown(!displayDropDown)}>X</p>
+                <p  onClick={() => closeMobile()}>X</p>
                 <Link to="collections/mens">
-                    <h2 onClick={() => setDisplayDropdown(!displayDropDown)}>Mens</h2>
+                    <h2 onClick={() => closeMobile()}>Mens</h2>
                 </Link>
                 <Link to="/collections/womens">
-                    <h2 onClick={() => setDisplayDropdown(!displayDropDown)}>Womens</h2>
+                    <h2 onClick={() => closeMobile()}>Womens</h2>
                 </Link>
                 <div className='saleTab'>
                     <h2 onClick={() => setDisplayArrivalTab(!displayArrivalTab)}>New Arrivals <i className={`fa ${displayArrivalTab ?  'fa-caret-up' : 'fa-caret-down'}`}></i></h2>
@@ -34,10 +39,10 @@ function Navbar(props) {
                 <div className={displayArrivalTab ? 'saleDropdownShow' : 'saleDropdownHide'}>
                     <ul>
                         <Link to="/collections/mens/arrivals">
-                            <h2 onClick={() => setDisplayDropdown(!displayDropDown)}>Mens</h2>
+                            <h2 onClick={() => closeMobile()}>Mens</h2>
                         </Link>
                         <Link to="/collections/womens/arrivals">
-                            <h2 onClick={() => setDisplayDropdown(!displayDropDown)}>Womens</h2>
+                            <h2  onClick={() => closeMobile()}>Womens</h2>
                         </Link>
                     </ul>
                 </div>
@@ -47,10 +52,10 @@ function Navbar(props) {
                 <div className={displaySaleTab ? 'saleDropdownShow' : 'saleDropdownHide'}>
                     <ul>
                     <Link to="/collections/mens/sale">
-                            <h2 onClick={() => setDisplayDropdown(!displayDropDown)}>Mens</h2>
+                            <h2 onClick={() => closeMobile()}>Mens</h2>
                         </Link>
                         <Link to="/collections/womens/sale">
-                            <h2 onClick={() => setDisplayDropdown(!displayDropDown)}>Womens</h2>
+                            <h2 onClick={() => closeMobile()}>Womens</h2>
                         </Link>
                     </ul>
                 </div>
